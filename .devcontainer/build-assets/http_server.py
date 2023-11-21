@@ -24,5 +24,5 @@ class NoCacheHTTPHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Expires", "0")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     http.server.test(HandlerClass=NoCacheHTTPHandler)
