@@ -25,3 +25,14 @@ Home <i class="fa-solid fa-house"></i>
 
 About us <i class="fa-solid fa-users"></i>
 
+Mood icons:
+
+Very Happy <i class="fa-regular fa-face-grin-hearts"></i>
+
+Happy <i class="fa-regular fa-face-smile-beam"></i>
+
+Meh <i class="fa-regular fa-face-meh"></i>
+
+Sad <i class="fa-regular fa-face-sad-tear"></i>
+
+Very Sad <i class="fa-regular fa-face-sad-cry"></i>
