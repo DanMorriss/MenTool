@@ -9,7 +9,6 @@
     --color-soft-off-white: #EBF2F2;
     --color-olive-green: #595542;
     --color-light-taupe: #BFBAAA;
-
     /* Font Variables */
     --font-primary: 'Audiowide', sans-serif;
     --font-secondary: 'Quicksand', sans-serif;
@@ -17,4 +16,9 @@
     --font-size-large: 36px;
     --font-size-x-large: 48px;
     --font-size-small: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: #595542;
 }
