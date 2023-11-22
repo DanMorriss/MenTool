@@ -19,6 +19,21 @@
 }
 
 body {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+
+}
+
+.navbar-brand {
     font-family: var(--font-primary);
-    background-color: #595542;
+}
+
+h1 {
+    font-family: var(--font-primary);
+}
+
+p {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    font-size: var(--font-size-normal);
 }
