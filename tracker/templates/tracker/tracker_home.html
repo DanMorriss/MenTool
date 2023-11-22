@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<html>
-<head>
 
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,21 +19,17 @@
 
 
 <section id"options-boxes">  
+  <div class="row d-flex justify-content-center ">
+    <div class="col-sm-1 col-md-2 border">See your Mentool Data</div>
+    <div class="col-sm-1 col-md-2 border">How are you today? <br>(Click here to log your mood)</div>
   <div>
-    <h4>See your MenTool data</h4>
-  </div>
-  
-  <div>
-    <h4>How are you today?</h4>
-    <p>(Click here to log your mood)</p>
-  </div>
 </section>
   
 <section id="snapshot">
   <div id="snapshot">
-    <h4>Snapshot of the last 30 days</h4>
+    <h4 class="text-center">Snapshot of the last 30 days</h4>
         <div class="chart-container">
-            <svg class="chart" viewBox="0 0 900 300">
+            <svg class="chart border" viewBox="0 0 900 300">
                 <!-- Replace the coordinates of the points with actual data values -->
                 <polyline class="line" points="0,240 30,180 60,270 90,120 120,210 150,150 180,240 210,180 240,270 270,120 300,210 330,150 360,240 390,180 420,270 450,120 480,210 510,150 540,240 570,180 600,270 630,120 660,210 690,150 720,240 750,180 780,270 810,120 840,210 870,150 900,240"></polyline>
                 <!-- Replace the coordinates of the points with actual data values -->
