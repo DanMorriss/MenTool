@@ -9,7 +9,6 @@
     --color-soft-off-white: #EBF2F2;
     --color-olive-green: #595542;
     --color-light-taupe: #BFBAAA;
-
     /* Font Variables */
     --font-primary: 'Audiowide', sans-serif;
     --font-secondary: 'Quicksand', sans-serif;
@@ -20,19 +19,6 @@
 }
 
 body {
-    font-family: var(--font-secondary);
-}
-
-h1, h2, h3, h4, h5 {
     font-family: var(--font-primary);
-}
-
-.background-image {
-    background-image: url('https://img.freepik.com/premium-photo/ai-generated-illustration-stylized-cartoon-landscape-featuring-tranquil-body-water_665346-42761.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+    background-color: #595542;
 }
