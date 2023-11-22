@@ -39,7 +39,7 @@ p {
 }
 
 .background-image {
-    background-image: url('https://img.freepik.com/premium-photo/ai-generated-illustration-stylized-cartoon-landscape-featuring-tranquil-body-water_665346-42761.jpg');
+    background-image: url("../images/background2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
