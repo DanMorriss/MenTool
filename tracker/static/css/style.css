@@ -18,25 +18,22 @@
     --font-size-small: 16px;
 }
 
-/* body {
-    font-family: var(--font-primary);
-    background-color: #595542;
-} */
-
 body {
     font-family: var(--font-secondary);
+    font-weight: bold;
+
 }
 
-h1, h2, h3, h4, h5 {
+.navbar-brand {
     font-family: var(--font-primary);
 }
 
-.background-image {
-    background-image: url('https://img.freepik.com/premium-photo/ai-generated-illustration-stylized-cartoon-landscape-featuring-tranquil-body-water_665346-42761.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+h1 {
+    font-family: var(--font-primary);
+}
+
+p {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    font-size: var(--font-size-normal);
 }
