@@ -56,15 +56,25 @@
           </ul>
         </div>
       </nav>
-    
-    
-    
-    
-    
-    
 
     {% block content %}
     {% endblock %}
+
+    <!-- Footer -->
+    <footer class="py-5 bg-light mt-5 ">
+        <div class="container px-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i><br>About Us</a>
+                        </li>
+                    </ul>
+                    <p class="m-0 text-center gold-text">Copyright &copy; MenTool 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap 4 JS -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -77,8 +87,6 @@
     <script src="{% static 'js/script.js' %}"></script>
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/076967cb18.js" crossorigin="anonymous"></script>
-
-    
 
 </body>
 
