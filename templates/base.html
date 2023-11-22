@@ -14,8 +14,20 @@
     {% endblock %}
 
     <title>MenTool</title>
+
 </head>
+
 <body>
+
+    <!-- Links -->
+    <a href="{% url 'landing' %}"><p><i class="fa-solid fa-infinity"></i> Landing Page</p></a>
+    <a href="{% url 'home' %}"><p><i class="fa-solid fa-house"></i> Account Home</p></a>
+    <a href="{% url 'mood-form' %}"><p><i class="fa-solid fa-brain"></i> How are you feeling</p></a>
+    <a href="{% url 'stats' %}"><p><i class="fa-solid fa-chart-line"></i> Stats</p></a>
+    <a href="{% url 'about-us' %}"><p><i class="fa-solid fa-users"></i> About Us</p></a>
+    <a href="{% url 'login' %}"><p><i class="fa-solid fa-user"></i> Login</p></a>
+    <a href="{% url 'signup' %}"><p><i class="fa-solid fa-right-from-bracket"></i> Sign Up</p></a>
+
     {% block content %}
     {% endblock %}
 
@@ -26,6 +38,8 @@
     <script src="{% static 'js/script.js' %}"></script>
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/076967cb18.js" crossorigin="anonymous"></script>
+
+    
 
 </body>
 </html>

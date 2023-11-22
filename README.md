@@ -16,8 +16,6 @@ Team **Mind Menders**:
 
 Font Awesome <br>
 
-Script <script src="https://kit.fontawesome.com/076967cb18.js" crossorigin="anonymous"></script>
-
 User <i class="fa-solid fa-user"></i>
 
 Chart <i class="fa-solid fa-chart-line"></i>
