@@ -18,3 +18,17 @@
     --font-size-x-large: 48px;
     --font-size-small: 16px;
 }
+
+body {
+    font-family: var(--font-primary);
+}
+
+.background-image {
+    background-image: url('https://img.freepik.com/premium-photo/ai-generated-illustration-stylized-cartoon-landscape-featuring-tranquil-body-water_665346-42761.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
