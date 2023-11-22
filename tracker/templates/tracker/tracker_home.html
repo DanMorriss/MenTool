@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<html>
-<head>
 
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,17 +16,57 @@
   <div>
     <h3 class="text-center">Hello [username]</h3>
   </div>
-  
-  <div>
-    <h4>See your MenTool data</h4>
-  </div>
-  
-  <div>
-    <h4>How are you today?</h4>
-    <p>(Click here to log your mood)</P>
-  </div>
 
+
+<section id"options-boxes">  
+  <div class="row d-flex justify-content-center ">
+    <div class="col-sm-1 col-md-2 border">See your Mentool Data</div>
+    <div class="col-sm-1 col-md-2 border">How are you today? <br>(Click here to log your mood)</div>
+  <div>
+</section>
   
+<section id="snapshot">
+  <div id="snapshot">
+    <h4 class="text-center">Snapshot of the last 30 days</h4>
+        <div class="chart-container">
+            <svg class="chart border" viewBox="0 0 900 300">
+                <!-- Replace the coordinates of the points with actual data values -->
+                <polyline class="line" points="0,240 30,180 60,270 90,120 120,210 150,150 180,240 210,180 240,270 270,120 300,210 330,150 360,240 390,180 420,270 450,120 480,210 510,150 540,240 570,180 600,270 630,120 660,210 690,150 720,240 750,180 780,270 810,120 840,210 870,150 900,240"></polyline>
+                <!-- Replace the coordinates of the points with actual data values -->
+                <circle class="point" cx="0" cy="240" r="2"></circle>
+                <circle class="point" cx="30" cy="180" r="2"></circle>
+                <circle class="point" cx="60" cy="270" r="2"></circle>
+                <circle class="point" cx="90" cy="120" r="2"></circle>
+                <circle class="point" cx="120" cy="210" r="2"></circle>
+                <circle class="point" cx="150" cy="150" r="2"></circle>
+                <circle class="point" cx="180" cy="240" r="2"></circle>
+                <circle class="point" cx="210" cy="180" r="2"></circle>
+                <circle class="point" cx="240" cy="270" r="2"></circle>
+                <circle class="point" cx="270" cy="120" r="2"></circle>
+                <circle class="point" cx="300" cy="210" r="2"></circle>
+                <circle class="point" cx="330" cy="150" r="2"></circle>
+                <circle class="point" cx="360" cy="240" r="2"></circle>
+                <circle class="point" cx="390" cy="180" r="2"></circle>
+                <circle class="point" cx="420" cy="270" r="2"></circle>
+                <circle class="point" cx="450" cy="120" r="2"></circle>
+                <circle class="point" cx="480" cy="210" r="2"></circle>
+                <circle class="point" cx="510" cy="150" r="2"></circle>
+                <circle class="point" cx="540" cy="240" r="2"></circle>
+                <circle class="point" cx="570" cy="180" r="2"></circle>
+                <circle class="point" cx="600" cy="270" r="2"></circle>
+                <circle class="point" cx="630" cy="120" r="2"></circle>
+                <circle class="point" cx="660" cy="210" r="2"></circle>
+                <circle class="point" cx="690" cy="150" r="2"></circle>
+                <circle class="point" cx="720" cy="240" r="2"></circle>
+                <circle class="point" cx="750" cy="180" r="2"></circle>
+                <circle class="point" cx="780" cy="270" r="2"></circle>
+                <circle class="point" cx="810" cy="120" r="2"></circle>
+                <circle class="point" cx="840" cy="210" r="2"></circle>
+                <circle class="point" cx="870" cy="150" r="2"></circle>
+                <circle class="point" cx="900" cy="240" r="2"></circle>
+            </svg>
+        </div>
+</section>
 
 </body>
 

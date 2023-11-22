@@ -21,18 +21,60 @@
 </head>
 
 <body>
-
-    <!-- Links -->
-    <a href="{% url 'landing' %}"><p><i class="fa-solid fa-infinity"></i> Landing Page</p></a>
-    <a href="{% url 'home' %}"><p><i class="fa-solid fa-house"></i> Account Home</p></a>
-    <a href="{% url 'mood-form' %}"><p><i class="fa-solid fa-brain"></i> How are you feeling</p></a>
-    <a href="{% url 'stats' %}"><p><i class="fa-solid fa-chart-line"></i> Stats</p></a>
-    <a href="{% url 'about-us' %}"><p><i class="fa-solid fa-users"></i> About Us</p></a>
-    <a href="{% url 'login' %}"><p><i class="fa-solid fa-user"></i> Login</p></a>
-    <a href="{% url 'signup' %}"><p><i class="fa-solid fa-right-from-bracket"></i> Sign Up</p></a>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'landing' %}">MenTool</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item pr-4 pt-2 pt-lg-0">
+                <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Account Home</a>
+            </li>
+            <li class="nav-item pr-4 pt-2 pt-lg-0">
+                <a href="{% url 'mood-form' %}"><i class="fa-solid fa-brain"></i> Log Mood</a>
+            </li>
+            <li class="nav-item pr-4 pt-2 pt-lg-0">
+                <a href="{% url 'stats' %}"><i class="fa-solid fa-chart-line"></i> Stats</a>
+            </li>
+            <li class="nav-item pr-4 pt-2 pt-lg-0">
+                <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i> About Us</a>
+            </li>
+            </li>
+            <li class="nav-item pr-4 pt-2 pt-lg-0">
+                <a href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Login</a>
+            </li>
+            </li>
+            <li class="nav-item pr-4 pt-2 pt-lg-0">
+                <a href="{% url 'signup' %}">Sign Up</a>
+            </li>
+            <li class="nav-item pr-4 pt-2 pt-lg-0">
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
     {% block content %}
     {% endblock %}
+
+    <!-- Footer -->
+    <footer class="py-5 bg-light mt-5 ">
+        <div class="container px-4">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i><br>About Us</a>
+                        </li>
+                    </ul>
+                    <p class="m-0 text-center gold-text">Copyright &copy; MenTool 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap 4 JS -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -45,8 +87,6 @@
     <script src="{% static 'js/script.js' %}"></script>
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/076967cb18.js" crossorigin="anonymous"></script>
-
-    
 
 </body>
 
