@@ -1,0 +1,1 @@
+web: gunicorn mentool.wsgi
