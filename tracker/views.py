@@ -1,5 +1,8 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from .models import Mood
 
 
 class HomeView(TemplateView):
@@ -10,8 +13,13 @@ class MoodView(TemplateView):
     template_name = 'tracker/tracker_mood.html'
 
 
-class StatsView(TemplateView):
+class StatsView(ListView):
+    model = Mood
     template_name = 'tracker/tracker_stats.html'
+
+    def get_queryset(self):
+        queryset = Mood.objects.all().order_by('date')
+        return queryset
 
 
 class LandingView(TemplateView):
