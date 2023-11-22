@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <div class="container bg-warning mt-5">
     <div class="row">
         <div class="col-12">
             <h1 class="text-center mt-3">Welcome to MenTool</h1>
             <br>
-            <img src="../static/images/emotions.png" alt="emotions faces">
+            <img src="{% static 'images/emotions.png' %}" alt="emotions faces">
             <p class="text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna
