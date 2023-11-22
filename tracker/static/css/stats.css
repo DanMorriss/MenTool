@@ -1,24 +1,40 @@
-.very-happy-face {
+.face {
+    transition: .5s ease-in-out;
     font-size: 2rem;
+    padding-top: .5rem;
+}
+
+.face:hover {
+    transition: .5s ease-in-out;
+    transform: scale(1.1);
+}
+
+.very-happy-face {
     padding-bottom: 10rem;
+    background: radial-gradient(ellipse at center, var(--color-navy-blue) 0%, rgba(1, 10, 38, 0) 100%);
+    border-radius: 4rem 4rem 0 0;
 }
 
 .happy-face {
-    font-size: 2rem;
     padding-bottom: 8rem;
+    background: radial-gradient(ellipse at center, var(--color-dark-teal) 0%, rgba(34, 64, 64, 0) 100%);
+    border-radius: 4rem 4rem 0 0;
 }
 
 .meh-face {
-    font-size: 2rem;
     padding-bottom: 6rem;
+    background: radial-gradient(ellipse at center, var(--color-olive-green) 0%, rgba(89, 85, 66, 0) 100%);
+    border-radius: 4rem 4rem 0 0;
 }
 
 .sad-face {
-    font-size: 2rem;
     padding-bottom: 4rem;
+    background: radial-gradient(ellipse at center, var(--color-light-taupe) 0%, rgba(191, 186, 170, 0) 100%);
+    border-radius: 4rem 4rem 0 0;
 }
 
 .very-sad-face {
-    font-size: 2rem;
     padding-bottom: 2rem;
+    background: radial-gradient(ellipse at center, var(--color-soft-off-white) 0%, rgba(235, 242, 242, 0) 100%);
+    border-radius: 4rem 4rem 0 0;
 }
