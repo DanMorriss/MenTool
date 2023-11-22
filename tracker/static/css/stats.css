@@ -1,0 +1,24 @@
+.very-happy-face {
+    font-size: 2rem;
+    padding-bottom: 10rem;
+}
+
+.happy-face {
+    font-size: 2rem;
+    padding-bottom: 8rem;
+}
+
+.meh-face {
+    font-size: 2rem;
+    padding-bottom: 6rem;
+}
+
+.sad-face {
+    font-size: 2rem;
+    padding-bottom: 4rem;
+}
+
+.very-sad-face {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}

@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
+{% endblock %}
 <h1 class="text-center p-3">Stats</h1>
 <div class="container">
     <div class="card shadow-lg p-5">
@@ -12,15 +14,15 @@
                 <div class="d-flex flex-column text-center justify-content-end m-1">
                     
                     {% if mood.mood_level == 0 %} <!--Very Happy-->
-                    <i class="fa-regular fa-face-grin-hearts pb-5 fs-1"></i>
+                    <i class="fa-regular fa-face-grin-hearts  very-happy-face"></i>
                     {% elif mood.mood_level == 1 %} <!--Happy-->
-                    <i class="fa-regular fa-face-smile-beam pb-4 fs-1"></i>
+                    <i class="fa-regular fa-face-smile-beam happy-face"></i>
                     {% elif mood.mood_level == 2 %} <!--Meh-->
-                    <i class="fa-regular fa-face-meh pb-3 fs-1"></i>
+                    <i class="fa-regular fa-face-meh meh-face"></i>
                     {% elif mood.mood_level == 3 %} <!--Sad-->
-                    <i class="fa-regular fa-face-sad-tear pb-2 fs-1"></i>
+                    <i class="fa-regular fa-face-sad-tear sad-face"></i>
                     {% elif mood.mood_level == 4 %} <!--Very Sad-->
-                    <i class="fa-regular fa-face-sad-cry pb-1 fs-1"></i>
+                    <i class="fa-regular fa-face-sad-cry very-sad-face"></i>
                     {% endif %}
                     <p>{{ mood.date|date:"" }}</p>
                 </div>
