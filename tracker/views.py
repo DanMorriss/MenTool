@@ -11,9 +11,15 @@ from .forms import UserRegistrationForm, UserLoginForm
 from .models import Mood
 
 
-class HomeView(LoginRequiredMixin, TemplateView):
+class HomeView(LoginRequiredMixin, ListView):
+    model = Mood
     template_name = 'tracker/tracker_home.html'
     login_url = '/login/'
+
+    def get_queryset(self):
+        queryset = Mood.objects.all().order_by('date').filter(
+            user=self.request.user)
+        return queryset
 
 
 class MoodView(LoginRequiredMixin, CreateView):
@@ -33,7 +39,8 @@ class StatsView(ListView):
     template_name = 'tracker/tracker_stats.html'
 
     def get_queryset(self):
-        queryset = Mood.objects.all().order_by('date')
+        queryset = Mood.objects.all().order_by('date').filter(
+            user=self.request.user)
         return queryset
 
 
