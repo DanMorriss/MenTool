@@ -41,13 +41,17 @@ body {
 
 /*--Navbar--*/
 
+.navbar {
+    background-color: #224040;
+}
+
 .navbar-brand {
     font-family: var(--font-primary);
-    color: rgb(37, 54, 7);
+    color: whitesmoke;
 }
 
 a {
-    color: rgb(37, 54, 7);
+    color: whitesmoke;
 
 }
 
