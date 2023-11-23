@@ -6,18 +6,24 @@
     <h1 class="heading">Account Home</h1>
   </div>
 
-  <div>
-    <h2 class="heading text-center">Hello [username]</h2>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-6 col-lg-8">
+    <h2 class="heading text-message text-center">Hello [username]</h2>
   </div>
-
-
-<div class="options-buttons">  
-  <div class="row d-flex justify-content-around">
-    <div class="start-btn col-sm-1 col-md-2 border text-center btn btn-lg btn-light">Your Mentool Data</div>
-    <div class="start-btn col-sm-1 col-md-2 border text-center btn btn-lg btn-light">How are you today? <br>(Click here to log your mood)</div>
-  <div>
 </div>
 
+<div class="row p-4 justify-content-center">
+  <div class="col-sm-12 col-md-6 col-lg-8">
+    <div class="container text-center">
+      <div class="start-btn border text-center btn btn-lg btn-block">
+        <a href="{% url 'mood-form' %}">Your Mentool Data</a>
+      </div>
+      <div class="start-btn border text-center btn btn-lg btn-block">
+        <a href="{% url 'mood-form' %}">How are you today? <br>(Click here to log your mood)</a>
+      </div>
+    </div>
+</div>  
+</div>
   
 
 <div class="snapshot">
