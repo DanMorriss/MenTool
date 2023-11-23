@@ -36,15 +36,15 @@
                     <div class="d-flex flex-column text-center justify-content-end m-1">
                         
                         {% if mood.mood_level == 0 %} <!--Very Happy-->
-                        <a href="{% url 'mood-detail' mood.id %}" class="face very-happy-face"><i class="fa-regular fa-face-grin-hearts "></i></a>
+                        <a href="{% url 'mood-detail' mood.id %}" class="face very-happy-face"><i class="fa-regular fa-face-grin-hearts"></i></a>
                         {% elif mood.mood_level == 1 %} <!--Happy-->
-                        <i class="fa-regular fa-face-smile-beam face happy-face"></i>
+                        <a href="{% url 'mood-detail' mood.id %}" class="face happy-face"><i class="fa-regular fa-face-smile-beam"></i></a>
                         {% elif mood.mood_level == 2 %} <!--Meh-->
-                        <i class="fa-regular fa-face-meh face meh-face"></i>
+                        <a href="{% url 'mood-detail' mood.id %}" class="face meh-face"><i class="fa-regular fa-face-meh"></i></a>
                         {% elif mood.mood_level == 3 %} <!--Sad-->
-                        <i class="fa-regular fa-face-sad-tear face sad-face"></i>
+                        <a href="{% url 'mood-detail' mood.id %}" class="face sad-face"><i class="fa-regular fa-face-sad-tear"></i></a>
                         {% elif mood.mood_level == 4 %} <!--Very Sad-->
-                        <i class="fa-regular fa-face-sad-cry face very-sad-face"></i>
+                        <a href="{% url 'mood-detail' mood.id %}" class="face very-sad-face"><i class="fa-regular fa-face-sad-cry"></i></a>
                         {% endif %}
                         <p>{{ mood.date|date:"" }}</p>
                     </div>
