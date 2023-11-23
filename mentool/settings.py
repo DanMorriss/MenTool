@@ -35,9 +35,10 @@ DEBUG = os.environ.get("DEBUG")
 CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 ALLOWED_HOSTS = [
+    "https://8000-danmorriss-mentool-1t3kh0d7w2b.ws-eu106.gitpod.io", 
     "mentool-2af96fd6f7e7.herokuapp.com/", "*",  # TODO: "*" to be removed
 ]
-
+CSRF_TRUSTED_ORIGINS = ["https://8000-danmorriss-mentool-1t3kh0d7w2b.ws-eu106.gitpod.io",]
 
 # Application definition
 
