@@ -63,11 +63,20 @@ a {
 a:hover {
 
     background-color: #dcd4cd;
+    color: #224040;
     text-decoration: none;
-    box-shadow: 0 0.4rem 0.4rem 0 rgb(78, 30, 6);
-    transform: scale(1.02);
-    transition: all 0.35s ease-in-out;
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+
+
 }
+
+.nav-link.active {
+    background-color: #dcd4cd;
+    color: #224040
+}
+
+
 
 h1,
 h2,
@@ -127,7 +136,7 @@ img {
 
 .bottom-line {
 
-    background-color: #595544;
+    background-color: #224040;
     font-size: small;
 
 }

@@ -24,7 +24,7 @@
     <div class="background-image">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="{% url 'landing' %}">
+            <a class="navbar-brand nav-link">
                 <h3>MenTool</h3>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -35,36 +35,43 @@
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Account Home</a>
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}"><i
+                                class="fa-solid fa-house"></i> Account Home</a>
                     </li>
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="{% url 'mood-form' %}"><i class="fa-solid fa-brain"></i> Log Mood</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'mood-form' %}active{% endif %}"
+                            href="{% url 'mood-form' %}"><i class="fa-solid fa-brain"></i> Log Mood</a>
                     </li>
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="{% url 'stats' %}"><i class="fa-solid fa-chart-line"></i> Stats</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'stats' %}active{% endif %}"
+                            href="{% url 'stats' %}"><i class="fa-solid fa-chart-line"></i> Stats</a>
                     </li>
                     {% endif %}
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i> About Us</a>
-                    </li>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'about-us' %}active{% endif %}"
+                            href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i> About Us</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="{% url 'logout' %}"><span id="usernameNav">{{ user.username | capfirst }}</span> <i
+                        <a class="nav-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}"
+                            href="{% url 'logout' %}"><span id="usernameNav">{{ user.username | capfirst }}</span> <i
                                 class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Login</a>
-                    </li>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}"
+                            href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Login</a>
                     </li>
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="{% url 'signup' %}">Sign Up</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'signup' %}active{% endif %}"
+                            href="{% url 'signup' %}">Sign Up</a>
                     </li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
+
+
 
         {% block content %}
         {% endblock %}
