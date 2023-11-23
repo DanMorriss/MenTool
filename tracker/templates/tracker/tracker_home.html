@@ -36,7 +36,7 @@
                     <div class="d-flex flex-column text-center justify-content-end m-1">
                         
                         {% if mood.mood_level == 0 %} <!--Very Happy-->
-                        <i class="fa-regular fa-face-grin-hearts face very-happy-face"></i>
+                        <a href="{% url 'mood-detail' mood.id %}" class="face very-happy-face"><i class="fa-regular fa-face-grin-hearts "></i></a>
                         {% elif mood.mood_level == 1 %} <!--Happy-->
                         <i class="fa-regular fa-face-smile-beam face happy-face"></i>
                         {% elif mood.mood_level == 2 %} <!--Meh-->
