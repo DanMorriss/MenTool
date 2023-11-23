@@ -101,6 +101,11 @@ img {
     border-radius: 50%;
 }
 
+.options-btn {
+    background-color: #BFBAAA;
+    font-weight: bold;
+    font-size: 125%;
+}
 
 /*--Footer--*/
 
