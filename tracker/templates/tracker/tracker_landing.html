@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container bg-warning mt-5">
+<!-- <div class="container bg-warning mt-5">
     <div class="row">
         <div class="col-12">
             <h1 class="text-center mt-3">Welcome to MenTool</h1>
             <br>
-            <img src="{% static 'images/emotions.png' %}" alt="emotions faces">
+        </div>
+        <img src="{% static 'images/emotions.png' %}" alt="emotions faces">
+        <div col-12>
             <p class="text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna
@@ -29,21 +31,58 @@
         </div>
     </div>
 </div>
-<br>
+</div>
+<br> -->
 
+<section class="welcome">
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6 col-lg-8">
 
+                <h1 class="welcome-heading text-center text-message">
+                    Welcome to MenTool </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Hero img-->
+<div class="hero-image">
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <img src="{% static 'images/logo.gif' %}" alt="emotions faces">
+        </div>
+    </div>
+</div>
+<section class="welcome-message">
+    <div class="container-fluid mt-3">
+        <div class="row justify-content-center">
+            <div class="message-container text-message col-sm-12 col-md-6 col-lg-6">
+                <p class="message-content text-center">
+                    Hey there! We're genuinely thrilled to have you on board.
+                    MenTool is more than just an app; it's
+                    your new companion on
+                    a journey towards greater self-awareness and emotional well-being.
 
+                    We understand that life throws curveballs, and sometimes, keeping track of how you feel can make all
+                    the difference.
+                    That's where we come in. Whether you’re riding high, feeling low, or just cruising somewhere in
+                    between, MenTool is
+                    here to help you understand and navigate your emotional world with greater clarity and confidence.
 
-<!-- <p>Very Happy <i class="fa-regular fa-face-grin-hearts"></i></p>
-
-<p>Happy <i class="fa-regular fa-face-smile-beam"></i></p>
-
-<p>Meh <i class="fa-regular fa-face-meh"></i></p>
-
-<p>Sad <i class="fa-regular fa-face-sad-tear"></i></p>
-
-<p>Very Sad <i class="fa-regular fa-face-sad-cry"></i></p>
- -->
+                    Take a moment each day to check in with yourself. Log your mood, understand patterns, and discover
+                    insights that can
+                    help you lead a more balanced and fulfilling life. Remember, this is a safe space to be honest and
+                    open about how you’re
+                    feeling - no judgments, no pressure.
+                </p>
+                <br>
+                <div class="buttons text-center mb-4">
+                    <a href="{% url 'mood-form' %}" class="btn start-btn btn-lg">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 {% endblock %}
