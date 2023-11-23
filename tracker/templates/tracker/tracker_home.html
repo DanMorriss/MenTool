@@ -10,23 +10,22 @@
     <h2 class="heading text-center">Hello [username]</h2>
   </div>
 
-<div class="row p-4 justify-content-center">
-  <div class="col-sm-12 col-md-6 col-lg-8">
-    <div class="container text-center">
+<div class="row p-4 justify-content-around">
       <div>
-        <a href="{% url 'stats' %}" class="options-btn border text-center btn btn-lg btn-block">Your Mentool Data</a>
+        <a href="{% url 'stats' %}" class="m-2 options-btn border text-center btn btn-lg btn-block">Your Mentool Data</a>
       </div>
       <div>
-        <a href="{% url 'mood-form' %}" class="options-btn border text-center btn btn-lg btn-block">How are you today? <br>(Click here to log your mood)</a>
+        <a href="{% url 'mood-form' %}" class="m-2 options-btn border text-center btn btn-lg btn-block">How are you feeling today? <br>(Click here to log your mood)</a>
       </div>
-    </div>
-  </div>  
 </div>
   
 
 <div class="snapshot">
 
   <h4 class="heading text-center">Your most recent mood</h4>
+  <div class="card">
+    <div class="card-body">Basic card</div>
+  </div>
         
 </div>
 
