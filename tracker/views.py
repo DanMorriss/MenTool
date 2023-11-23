@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, FormView
 from .forms import MoodForm
+from django.utils import timezone
 
 from .forms import UserRegistrationForm, UserLoginForm
 
@@ -20,6 +21,11 @@ class MoodView(LoginRequiredMixin, CreateView):
     model = Mood
     success_url = reverse_lazy('stats')
     form_class = MoodForm
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.date = timezone.now()
+        return super().form_valid(form)
 
 
 class StatsView(ListView):
