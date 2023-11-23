@@ -28,6 +28,11 @@ body {
     font-family: var(--font-primary);
 }
 
+a {
+    color: rgb(37, 54, 7);
+
+}
+
 h1,
 h2,
 h3,
@@ -53,7 +58,7 @@ p {
 }
 
 .text-message {
-    background-color: #BFBAAA;
+    background-color: #ddd9ca;
     border-radius: 10px;
 }
 
