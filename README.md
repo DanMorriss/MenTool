@@ -74,18 +74,20 @@ MenTool is more than just an app; it's your new companion on a journey towards g
 ### First Time User
 1. As a first time user, I want to be able to track my mood
 2. As a first time user, I want to be able to create an account
+3. As a first time user, I want to be able to navigate the app easily 
 
 
 ### Returning User
-3. As a returning user, I want to be able to continue the track my mood
-4. As a returning user, I want to be able to see my mood history
-5. As a returning user, I want to be able to log into my account
-6. As a returning user, I want to be able to find out about menth health sites
+4. As a returning user, I want to be able to continue the track my mood
+5. As a returning user, I want to be able to see my mood history
+6. As a returning user, I want to be able to log into my account
+7. As a returning user, I want to be able to find out about mental health sites
+8. As a returning user, I want to be able to find out who built the app
 
 ### Website Owner
-7. As the App owner, we want users to find informantion about mental health
-8. As the App owner, we want users to be able to track thier moods
-9. As the App owner, we want users to find out about the devs who built the site
+9. As the App owner, we want users to find informantion about mental health
+10. As the App owner, we want users to be able to track thier moods
+11. As the App owner, we want users to find out about the devs who built the site
 
 # Design
 ## Design Choices
@@ -111,37 +113,41 @@ Very Sad <i class="fa-regular fa-face-sad-cry"></i>
 ![Background](/static/images/background_images.png)
 
 ## Fonts
-![Fonts](/static/images/fontstyle.png)
+### Primary Font
+![Audiowide](/static/images/audiowide.png)
+
+### Secondary Font
+![Quicksand](/static/images/quicksand.png)
 
 ## Wireframes
 <details>
 <summary>Landing Page</summary>
 <br>
-<img src="./mentool/wireframes/Landing page.png" alt="landing page wireframe">
+<img src="./wireframes/landing-page.jpg" alt="landing page wireframe">
 </details>
 
 <details>
 <summary>About Us</summary>
 <br>
-<img src="./mentool/wireframes/about us.png" alt="about us page wireframe"> 
+<img src="./wireframes/" alt="about us page wireframe"> 
 </details>
 
 <details>
 <summary>Account Home</summary>
 <br>
-<img src="./mentool/wireframes/acount home.png" alt="account home page wireframe"> 
+<img src="./wireframes/account-home.jpg" alt="account home page wireframe"> 
 </details>
 
 <details>
-<summary>Login Page</summary>
+<summary>Create Account and Login Page</summary>
 <br>
-<img src="./mentool/wireframes/login page" alt="login page wireframe"> 
+<img src="./wireframes/create-account-and-login-screens.jpg" alt="login and account page wireframe"> 
 </details>
 
 <details>
-<summary>Sign Up Page</summary>
+<summary>Analytics</summary>
 <br>
-<img src="./mentool/wireframes/sign up page.png" alt="sign up page wireframe"> 
+<img src="./wireframes/analytics.jpg" alt="analytics page wireframe"> 
 </details>
 
 
@@ -168,31 +174,34 @@ Very Sad <i class="fa-regular fa-face-sad-cry"></i>
 # Features
 ## Existing Features
 ### Mood Tracker
+The mood tracker allows the user the tracker their mood on the app by clicking on the relivant icons
 
-
+User stories covered: 1, 10
 
 ### Account
+The account feature allows the user to login and out of the app keep their data secure
 
-
+User stories covered: 2, 4, 6
 
 ### Mood Analytics
+The mood analytics feature allows the user to be able to keep a record of the moods that they've inputed in the mood tracker
 
-
+User stories covered: 5
 
 ### GitHub Profile Link
+The Github profile link allows the user to see the acounts of the devs that built the app and see their other work
 
-
-
+User stories covered: 8, 11
 
 ### Navbar
+The navbar allows the user to navigate around the app
 
-
-
+User stories covered: 3
 
 ### Footer
+The footer links back to the about us page which details the devs involved with the app
 
-
-
+User stories covered: 8, 11
 
 # Validation
 I put my website through the following validation tools:
