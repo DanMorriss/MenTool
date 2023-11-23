@@ -42,11 +42,23 @@ body {
 
 .navbar-brand {
     font-family: var(--font-primary);
+    color: rgb(37, 54, 7);
 }
 
 a {
     color: rgb(37, 54, 7);
 
+}
+
+
+
+a:hover {
+
+    background-color: #dcd4cd;
+    text-decoration: none;
+    box-shadow: 0 0.4rem 0.4rem 0 rgb(78, 30, 6);
+    transform: scale(1.02);
+    transition: all 0.35s ease-in-out;
 }
 
 h1,
@@ -93,12 +105,11 @@ img {
 /*--Footer--*/
 
 .social-icons:hover {
-    color: #f8f9fa !important;
-    background-color: #cddcd8;
+    background-color: #dcd4cd;
+    text-decoration: none;
+    box-shadow: 0 0.4rem 0.4rem 0 rgb(78, 30, 6);
+    transform: scale(1.02);
     transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
 }
 
 .bottom-line {
