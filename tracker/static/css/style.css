@@ -43,7 +43,7 @@ p {
 }
 
 .background-image {
-    background-image: url("../images/background_images.png");
+    background-image: url("/static/images/background_images.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -69,5 +69,10 @@ p {
     box-shadow: 0 0.4rem 0.4rem 0 rgb(236, 239, 232);
     transform: scale(1.02);
     transition: transform 100ms;
+}
+
+
+img {
+    border-radius: 50%;
 }
 
