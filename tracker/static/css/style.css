@@ -70,3 +70,7 @@ p {
     transform: scale(1.02);
     transition: transform 100ms;
 }
+
+img {
+    border-radius: 50%;
+}
