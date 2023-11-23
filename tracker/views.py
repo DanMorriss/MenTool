@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, TemplateView
 from django.views.generic.edit import CreateView, FormView
+from .forms import MoodForm
 
 from .forms import UserRegistrationForm, UserLoginForm
 
@@ -14,8 +15,11 @@ class HomeView(LoginRequiredMixin, TemplateView):
     login_url = '/login/'
 
 
-class MoodView(TemplateView):
+class MoodView(LoginRequiredMixin, CreateView):
     template_name = 'tracker/tracker_mood.html'
+    model = Mood
+    success_url = reverse_lazy('stats')
+    form_class = MoodForm
 
 
 class StatsView(ListView):
