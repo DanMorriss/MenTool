@@ -33,6 +33,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
                         <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Account Home</a>
                     </li>
@@ -42,10 +43,16 @@
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
                         <a href="{% url 'stats' %}"><i class="fa-solid fa-chart-line"></i> Stats</a>
                     </li>
+                    {% endif %}
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
                         <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i> About Us</a>
                     </li>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'logout' %}">{{ user.username | capfirst }}  <i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
                         <a href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Login</a>
                     </li>
@@ -53,9 +60,7 @@
                     <li class="nav-item pr-4 pt-2 pt-lg-0">
                         <a href="{% url 'signup' %}">Sign Up</a>
                     </li>
-                    <li class="nav-item pr-4 pt-2 pt-lg-0">
-                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
