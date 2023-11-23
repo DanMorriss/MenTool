@@ -43,7 +43,7 @@ p {
 }
 
 .background-image {
-    background-image: url("../images/background_images.png");
+    background-image: url("/static/images/background_images.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
