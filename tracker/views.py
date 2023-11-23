@@ -2,7 +2,7 @@ from django.contrib.auth import login, logout
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import ListView, TemplateView, View, DetailView, UpdateView
+from django.views.generic import ListView, TemplateView, View, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView, FormView
 from .forms import MoodForm
 from django.utils import timezone
@@ -27,7 +27,7 @@ class HomeView(LoginRequiredMixin, ListView):
 class MoodView(LoginRequiredMixin, CreateView):
     template_name = 'tracker/tracker_mood.html'
     model = Mood
-    success_url = reverse_lazy('stats')
+    success_url = reverse_lazy('home')
     form_class = MoodForm
 
     def form_valid(self, form):
@@ -55,6 +55,16 @@ class UpdateMoodView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         form.instance.user = self.request.user
         form.instance.date = timezone.now()
         return super().form_valid(form)
+
+    def test_func(self):
+        mood = self.get_object()
+        return self.request.user == mood.user
+
+
+class DeleteMoodView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Mood
+    success_url = reverse_lazy('home')
+    template_name = 'tracker/tracker_confirm_mood_delete.html'
 
     def test_func(self):
         mood = self.get_object()

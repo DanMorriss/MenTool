@@ -9,7 +9,7 @@
     <div class="card shadow-lg p-5">
         <p class="text-center">{{ mood.date }}</p>
 
-        <div class="">
+        <div class="pb-3 ">
             <div class=" text-center m-1">
                 {% if mood.mood_level == 0 %} <!--Very Happy-->
                 <i class="fa-regular fa-face-grin-hearts face very-happy-face"></i>
@@ -23,12 +23,18 @@
                 <i class="fa-regular fa-face-sad-cry face very-sad-face"></i>
                 {% endif %}
             </div>
-            <p>Comment: {{ mood.comment }}</p>
+            {% if mood.comment %}
+                <div class="text-center m-1">
+                    <p>Comment:</p>
+                    <p>{{ mood.comment }}</p>
+                </div>
+            {% endif %}
         </div>
 
-        <div class="container">
+
+        <div class="container text-center">
             <a href="{% url 'update-mood' mood.id %}" class="btn btn-primary ">Edit</a>
-            <a href="" class="btn btn-danger ">Delete</a>
+            <a href="{% url 'delete-mood' mood.id %}" class="btn btn-danger ">Delete</a>
         </div>
 
     </div>
