@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from .models import Mood
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -19,3 +20,10 @@ class UserLoginForm(AuthenticationForm):
 
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'form-control form-control-lg'
+
+
+class MoodForm(forms.ModelForm):
+
+    class Meta:
+        model = Mood
+        fields = ['mood_level', 'comment']
