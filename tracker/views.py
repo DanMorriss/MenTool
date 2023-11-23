@@ -1,10 +1,12 @@
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.urls import reverse_lazy
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView, TemplateView
+from django.views.generic import ListView, TemplateView, View
 from django.views.generic.edit import CreateView, FormView
 from .forms import MoodForm
 from django.utils import timezone
+from django.shortcuts import redirect
 
 from .forms import UserRegistrationForm, UserLoginForm
 
@@ -61,6 +63,13 @@ class SignUpView(CreateView):
         response = super().form_valid(form)
         login(self.request, self.object)
         return response
+
+
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        messages.success(request, 'You have been logged out!', extra_tags='info')
+        return redirect(reverse_lazy('landing'))
 
 
 class LoginView(FormView):
