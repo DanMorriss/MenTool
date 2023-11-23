@@ -1,46 +1,3 @@
-[Link to the deployed website](https://mentool-2af96fd6f7e7.herokuapp.com/)
-
-**Colours**
-
-![Colours](docs/screenshots/MenTool_colours.png)
-
-# Project Name: **MenTool**
-
-
-Team **Mind Menders**:
-
-- Tomislav Dukez
-- Agy
-- Ben Gilbert
-- Jamie Phelps
-- Dan Morriss
-
-Font Awesome <br>
-
-User <i class="fa-solid fa-user"></i>
-
-Chart <i class="fa-solid fa-chart-line"></i>
-
-Brain for track your mood? <i class="fa-solid fa-brain"></i>
-
-Logout <i class="fa-solid fa-right-from-bracket"></i>
-
-Home <i class="fa-solid fa-house"></i>
-
-About us <i class="fa-solid fa-users"></i>
-
-Mood icons:
-
-Very Happy <i class="fa-regular fa-face-grin-hearts"></i>
-
-Happy <i class="fa-regular fa-face-smile-beam"></i>
-
-Meh <i class="fa-regular fa-face-meh"></i>
-
-Sad <i class="fa-regular fa-face-sad-tear"></i>
-
-Very Sad <i class="fa-regular fa-face-sad-cry"></i>
-
 # MenTool
 By Mind Menders
 Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps and Stanley Owanta
@@ -120,25 +77,41 @@ MenTool is more than just an app; it's your new companion on a journey towards g
 
 
 ### Returning User
-
+3. As a returning user, I want to be able to continue the track my mood
+4. As a returning user, I want to be able to see my mood history
+5. As a returning user, I want to be able to log into my account
+6. As a returning user, I want to be able to find out about menth health sites
 
 ### Website Owner
-
+7. As the App owner, we want users to find informantion about mental health
+8. As the App owner, we want users to be able to track thier moods
+9. As the App owner, we want users to find out about the devs who built the site
 
 # Design
 ## Design Choices
 
+## Font Awesome
+User <i class="fa-solid fa-user"></i>
+Chart <i class="fa-solid fa-chart-line"></i>
+Brain for track your mood? <i class="fa-solid fa-brain"></i>
+Logout <i class="fa-solid fa-right-from-bracket"></i>
+Home <i class="fa-solid fa-house"></i>
+About us <i class="fa-solid fa-users"></i>
+
+## Mood Icons
+Very Happy <i class="fa-regular fa-face-grin-hearts"></i>
+Happy <i class="fa-regular fa-face-smile-beam"></i>
+Meh <i class="fa-regular fa-face-meh"></i>
+Sad <i class="fa-regular fa-face-sad-tear"></i>
+Very Sad <i class="fa-regular fa-face-sad-cry"></i>
 
 ## Colour
 ![Colours](docs/screenshots/MenTool_colours.png)
 
-
+![Background](/static/images/background_images.png)
 
 ## Fonts
-To  find the fonts I  wanted to use, I  searched through the google fonts webpage to find two different but complementary fonts. 
-
-![Google Font Comfortaa](./assets/readme-images/font-comfortaa.png)
-![Google Font Nanum Gothic](./assets/readme-images/font-nanum-gothic.png)
+![Fonts](/static/images/fontstyle.png)
 
 ## Wireframes
 <details>
