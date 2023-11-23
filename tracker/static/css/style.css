@@ -85,12 +85,12 @@ p {
     border-radius: 10px;
 }
 
-.start-btn {
+.action-btn {
     background-color: #224040;
     color: white;
 }
 
-.start-btn:hover {
+.action-btn:hover {
     background-color: #883039;
     color: white;
     cursor: pointer;

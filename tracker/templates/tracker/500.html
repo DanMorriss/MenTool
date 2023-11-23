@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="error-message">
+    <div class="container-fluid mt-3">
+        <div class="row justify-content-center">
+            <div class="message-container text-message col-sm-12 col-md-6 col-lg-6">
+                <h1 class="error-message text-center">
+                    Sorry, something went wrong on our server
+                </h1>
+                <br>
+                <p>Press this button to go back or try again later</p>
+                <div class="buttons text-center mb-4">
+                    <a href="{% url 'landing' %}" class="btn action-btn btn-lg">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
