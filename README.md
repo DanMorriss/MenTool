@@ -45,11 +45,10 @@ Very Sad <i class="fa-regular fa-face-sad-cry"></i>
 By Mind Menders
 Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps and Stanley Owanta
 
-![logo]
+<img src="./static/images/logo.gif" alt="MenTool Logo" width=200>
 
 
-
-[Live Webpage]
+[Website Link](https://mentool-2af96fd6f7e7.herokuapp.com/)
 
 # Table of Content
 
@@ -87,27 +86,37 @@ Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps 
 11. [Acknowledgements](#acknowledgements)
 
 # Project Description
-
-MenTool is a application for users to be able to track thier moods, 
+MenTool is more than just an app; it's your new companion on a journey towards greater self-awareness and emotional well-being. We understand that life throws curveballs, and sometimes, keeping track of how you feel can make all the difference. That's where we come in. Whether you’re riding high, feeling low, or just cruising somewhere in between, MenTool is here to help you understand and navigate your emotional world with greater clarity and confidence. Take a moment each day to check in with yourself. Log your mood, understand patterns, and discover insights that can help you lead a more balanced and fulfilling life. Remember, this is a safe space to be honest and open about how you’re feeling - no judgments, no pressure.
 
 # Project Goals
 
 ## User Goals
+* To be able to track moods
+* To see previous mood patterns 
+* To be able to create an account
+* To be able to log in and out 
 
 
 ## Site Owner Goals
+* To help users track their moods
+* To help users realise what sort of mood they are in
+* Provide an account feature for users to keep thier infomation safe
 
 
 # User Experience
 
 ## Target Audience
+* Users who want to start tracking their feelings
+* Users who want to continue to track their feelings
+* Users who want to use a login in
 
 
 ## User Requrements and Expectations
 
-
 ## User Stories
 ### First Time User
+1. As a first time user, I want to be able to track my mood
+2. As a first time user, I want to be able to create an account
 
 
 ### Returning User
@@ -181,7 +190,6 @@ To  find the fonts I  wanted to use, I  searched through the google fonts webpag
 * Django
 * Heroku
 * Jquery
-*
 
 
 # Features
