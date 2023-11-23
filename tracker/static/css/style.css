@@ -18,14 +18,35 @@
     --font-size-small: 16px;
 }
 
+
 body {
     font-family: var(--font-secondary);
     font-weight: bold;
+    padding-bottom: 300px;
+
+
 
 }
 
+.background-image {
+    background-image: url("/static/images/mentool_background_image_lrg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/*--Navbar--*/
+
 .navbar-brand {
     font-family: var(--font-primary);
+}
+
+a {
+    color: rgb(37, 54, 7);
+
 }
 
 h1,
@@ -42,18 +63,9 @@ p {
     font-size: var(--font-size-normal);
 }
 
-.background-image {
-    background-image: url("/static/images/background_images.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
 
 .text-message {
-    background-color: #BFBAAA;
+    background-color: #ddd9ca;
     border-radius: 10px;
 }
 
@@ -71,6 +83,27 @@ p {
     transition: transform 100ms;
 }
 
+/*--Logo--*/
+
 img {
     border-radius: 50%;
+}
+
+
+/*--Footer--*/
+
+.social-icons:hover {
+    color: #f8f9fa !important;
+    background-color: #cddcd8;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.bottom-line {
+
+    background-color: #595544;
+    font-size: small;
+
 }

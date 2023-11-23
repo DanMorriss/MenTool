@@ -2,6 +2,16 @@
 {% load static %}
 {% block content %}
 
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <h2>How are you feeling today?</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Log Mood</button>
+        
+    </form>
+</div>
+
 <h1>Mood Form</h1>
 <h2>Font Awesome Mood Icons:</h2>
 
