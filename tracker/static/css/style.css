@@ -22,20 +22,21 @@
 body {
     font-family: var(--font-secondary);
     font-weight: bold;
-    padding-bottom: 300px;
+
 
 
 
 }
 
 .background-image {
-    background-image: url("/static/images/mentool_background_image_lrg.png");
+    background-image: url("https://res.cloudinary.com/dydzwcqhz/image/upload/v1700753963/static/images/mentool_background_lrg.0cb5f793ba85.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
     width: 100%;
     margin: 0;
+
 }
 
 /*--Navbar--*/
