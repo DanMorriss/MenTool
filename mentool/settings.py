@@ -20,19 +20,22 @@ from dotenv import load_dotenv
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-if os.path.isfile('.env'):
+if os.path.isfile(".env"):
     load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = os.environ.get("DEBUG")
+
+# CLOUDINARY URL from environment variable
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 ALLOWED_HOSTS = [
-    '*',
+    "mentool-2af96fd6f7e7.herokuapp.com/", "*",  # TODO: "*" to be removed
 ]
 
 
@@ -44,7 +47,9 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "cloudinary_storage",
     "django.contrib.staticfiles",
+    "cloudinary",
     "tracker",
 ]
 
@@ -83,7 +88,7 @@ WSGI_APPLICATION = "mentool.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-   'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+   "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
@@ -118,15 +123,22 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# Static files (CSS, JavaScript, Images) and Cloudinary Settings
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-    ]
+STATICFILES_STORAGE = \
+    "cloudinary_storage.storage.StaticHashedCloudinaryStorage"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = "/media/"
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Add login url
+LOGIN_URL = "login"

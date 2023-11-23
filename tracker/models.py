@@ -18,7 +18,7 @@ class Mood(models.Model):
 
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='moods')
-    date= models.DateField()
+    date = models.DateField()
     mood_level = models.IntegerField(choices=MOOD_CHOICES, default=0)
     comment = models.CharField(max_length=500, blank=True)
 
