@@ -124,6 +124,15 @@ p {
 
 /*--Logo--*/
 
+.message-content {
+    /* Adjust styling as needed; remove text-center if you want the text to wrap around the image */
+}
+
+.clearfix {
+    clear: both;
+    /* Clear the float to prevent layout issues */
+}
+
 img {
     border-radius: 50%;
 }
