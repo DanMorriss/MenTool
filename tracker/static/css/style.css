@@ -190,6 +190,11 @@ img {
     box-shadow: 3px 5px .5em #010A26;
 }
 
+.mood-container {
+    background-color: #224040;
+    box-shadow: 3px 5px .5em #010A26;
+}
+
 /*--Footer--*/
 
 
@@ -212,6 +217,7 @@ footer {
     font-size: small;
 
 }
+
 
 /*---------------About us*/
 
