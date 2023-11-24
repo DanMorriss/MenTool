@@ -2,50 +2,48 @@
 {% load static %}
 {% block content %}
 
-<h1>Login</h1>
-
 <section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-dark text-white" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="bg-dark text-white card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Sign In</h2>
 
-            <div class="mb-md-5 mt-md-4 pb-5">
+                            <form method="post">
+                                {% csrf_token %}
 
-              <a class="link" href="{% url 'login' %}">sign in</a></p>
-              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                                {% if form.errors %}
+                                    <div class="alert alert-danger bg-warning" role="alert">
+                                        <strong>Error:</strong> Please correct the errors below.
+                                        {{form.errors}}
+                                    </div>
+                                {% endif %}
 
-              <form method="post">
-                {% csrf_token %}
+                                <div class="form-outline mb-2">
+                                    {{ form.username }}
+                                    <label class="form-label" for="{{ form.username.id_for_label }}">Username</label>
+                                </div>
 
-                <div class="form-outline form-black mb-4">
-                  {{ form.username }}
-                  <label class="form-label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+                                <div class="form-outline mb-2">
+                                    {{ form.password }}
+                                    <label class="form-label" for="{{ form.password.id_for_label }}">Password</label>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Log In</button>
+                                </div>
+
+                            </form>
+                            <p class="text-center text-light mt-5 mb-0">Don't have an account? <a
+                                    href="{% url 'signup' %}" class="fw-bold text-light"><u>Signup here</u></a></p>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-outline form-white mb-4">
-                  {{ form.password }}
-                  <label class="form-label" for="{{ form.password.id_for_label }}">Password</label>
-                </div>
-
-                <!-- You can uncomment the next line if you want a "Forgot password?" link -->
-                <!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> -->
-
-                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-              </form>
-
             </div>
-
-            <div>
-              <p class="mb-0">Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
-            </div>
-
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</section>
-
+</section> 
 {% endblock %}

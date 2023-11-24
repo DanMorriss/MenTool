@@ -5,13 +5,15 @@ from .models import Mood
 
 
 class UserRegistrationForm(UserCreationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control form-control-lg'
+
     class Meta:
         model = get_user_model()
-        fields = ("username", "email", "first_name", "last_name",)
-        
-        widgets =  {
-            'username': forms.TextInput(attrs={'class': 'form-control w-50',}),
-        }
+        fields = ("username", "first_name", "last_name",)
 
 
 class UserLoginForm(AuthenticationForm):

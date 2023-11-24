@@ -7,6 +7,7 @@ from django.views.generic.edit import CreateView, FormView
 from .forms import MoodForm
 from django.utils import timezone
 from django.shortcuts import redirect
+from django.contrib.auth import get_user_model
 
 from .forms import UserRegistrationForm, UserLoginForm
 
@@ -16,7 +17,7 @@ from .models import Mood
 class HomeView(LoginRequiredMixin, ListView):
     model = Mood
     template_name = 'tracker/tracker_home.html'
-    login_url = '/login/'
+    login_url = reverse_lazy('login')
 
     def get_queryset(self):
         queryset = Mood.objects.all().order_by('date').filter(
@@ -116,3 +117,13 @@ class LoginView(FormView):
         login(self.request, form.get_user())
         messages.success(self.request, "You have been logged in!", extra_tags="alert alert-success alert-dismissible")
         return super().form_valid(form)
+
+
+class DeleteAccontView(LoginRequiredMixin, DeleteView):
+    model = get_user_model()
+    success_url = reverse_lazy('home')
+    template_name = 'tracker/tracker_account_delete.html'
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
