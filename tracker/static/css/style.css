@@ -167,15 +167,15 @@ p {
     box-shadow: 3px 5px .5em #010A26;
 }
 
-<<<<<<< HEAD
 
-=======
+
+
 .date-text {
     color: #EBF2F2;
     width: 100%;
 }
->>>>>>> 07cc1c895bf6d1be1ae96648dd08c46c1c10dbd3
-/*--Footer--*/
+
+
 
 
 footer {
@@ -203,4 +203,11 @@ footer {
 
 .col-4 {
     padding: 15px;
+
 }
+
+.about-heading {
+    color: #010A26;
+    font-size: "300%";
+}
+
