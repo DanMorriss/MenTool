@@ -25,10 +25,11 @@
 
 <div class="snapshot">
 
-  <h4 class="heading text-center">Your most recent mood</h4>
+  
 
     <div class="container">
       <div class="mood-container card p-5">
+        <h4 class="heading text-center date-text">Your most recent mood</h4>
         {% if object_list %}
             <div class="d-flex overflow-auto ">
                 <div class="d-flex">
@@ -53,7 +54,7 @@
             </div>
         {% else %}
             <div>
-                <p>No Data Yet</p>
+                <p class="date-text">No Data Yet</p>
             </div>
         {% endif %}
         </div>
