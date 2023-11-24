@@ -108,15 +108,19 @@ Sad <i class="fa-regular fa-face-sad-tear"></i>
 Very Sad <i class="fa-regular fa-face-sad-cry"></i>
 
 ## Colour
+This colour palette combines deep navy blue (#010A26), dark teal (#224040), soft off-white (#EBF2F2), olive green (#595542), and light taupe (#BFBAAA) to create a harmonious and balanced aesthetic.  We chose these calm, earthly colours to reflect the app's purpose of tracking and reflecting on emotional states.
+
 ![Colours](docs/screenshots/MenTool_colours.png)
 
 ![Background](/static/images/background_images.png)
 
 ## Fonts
-### Primary Font
+Audiowide, with its modern and tech-forward appearance, was used for headings to give the app a contemporary and professional look. In contrast, Quicksand, with its more approachable and readable style, was applied for body text, ensuring that longer texts are easy on the eyes and pleasant to read. The combination of these two fonts balances a modern, tech-forward look with approachability and ease of use, aligning well with the app’s purpose and its target user base.
+
+### Audiowide Font
 ![Audiowide](/static/images/audiowide.png)
 
-### Secondary Font
+### Quicksand Font
 ![Quicksand](/static/images/quicksand.png)
 
 ## Wireframes
