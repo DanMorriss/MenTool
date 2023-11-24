@@ -46,7 +46,7 @@
                         {% elif mood.mood_level == 4 %} <!--Very Sad-->
                         <a href="{% url 'mood-detail' mood.id %}" class="face very-sad-face"><i class="fa-regular fa-face-sad-cry"></i></a>
                         {% endif %}
-                        <p>{{ mood.date|date:"" }}</p>
+                        <p class="date-text">{{ mood.date|date:"" }}</p>
                     </div>
                 {% endfor %}
                 </div>
