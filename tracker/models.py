@@ -23,4 +23,5 @@ class Mood(models.Model):
     comment = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
-        return f'{self.user} - {self.date} - {self.get_mood_level_display()} - {self.comment}'
+        return f'{self.user} - {self.date} - {self.get_mood_level_display()
+                                              } - {self.comment}'
