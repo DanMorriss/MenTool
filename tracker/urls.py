@@ -14,4 +14,5 @@ urlpatterns = [
     path('mood/<int:pk>/', views.MoodDetailView.as_view(), name='mood-detail'),
     path('mood/<int:pk>/update/', views.UpdateMoodView.as_view(), name='update-mood'),
     path('mood/<int:pk>/delete/', views.DeleteMoodView.as_view(), name='delete-mood'),
+    path('account/delete/', views.DeleteAccontView.as_view(), name='delete-account'),
 ]
