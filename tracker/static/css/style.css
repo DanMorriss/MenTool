@@ -18,24 +18,28 @@
     --font-size-small: 16px;
 }
 
-html {
+
+/* html {
     height: 100%;
-}
+} */
+
 
 body {
-    display: flex;
+    /* display: flex; */
     font-family: var(--font-secondary);
     font-weight: bold;
-    height: 100%;
+    /* height: 100%;
     min-height: 100vh;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
-.wrap-content {
+
+/* .wrap-content {
     flex: 1;
-}
+} */
 
-background-image {
+
+.background-image {
     background-image: url("https://res.cloudinary.com/dydzwcqhz/image/upload/v1700753963/static/images/mentool_background_lrg.0cb5f793ba85.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,10 +70,7 @@ a {
     color: whitesmoke;
 }
 
-#usernameNav:hover {
-    color: #224040;
-}
-
+/* a:hover */
 .nav-link:hover {
 
     background-color: #dcd4cd;
@@ -105,6 +106,7 @@ p {
 
 .text-message {
     background-color: #eae6d7;
+    /* background-color: #ddd9ca; */
     border-radius: 10px;
 }
 
@@ -136,14 +138,12 @@ img {
 
 /*--Footer--*/
 
-footer {
 
+/* footer {
     bottom: 0px;
     width: 100%;
     margin-top: auto;
-
 }
-
 .footer-social-icons {
     display: flex;
     justify-content: center;
@@ -152,8 +152,7 @@ footer {
     /* Aligns items vertically */
     padding: 20px 0;
     /* Add padding as needed */
-}
-
+} */
 
 
 .social-icons:hover {
