@@ -15,112 +15,114 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     {% endblock %}
-
+    <!-- SEO -->
     <title>MenTool</title>
+    <meta name="author" content=" Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps and Stanley Owanta">
+    <meta name="description" content="MenTool: Your companion for self-awareness and emotional well-being. Track your mood, understand patterns, and gain insights for a more balanced life. A safe space for honest self-reflection.">
+    <meta name="keywords" content="Mentool Mindmenders Emotional well-being Self-awareness Mood tracking Men's mental health Mental wellness app Daily check-ins">
+
     {% block head %}{% endblock %}
 </head>
 
 <body>
-
-    <div class="wrap-content">
-        <div class="background-image">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand nav-link" href="{% url 'landing' %}">
-                    <h3>MenTool</h3>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav ml-auto">
-                        {% if user.is_authenticated %}
-                        <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.path == 'home' %}active{% endif %}"
-                                href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Account Home</a>
-                        </li>
-                        <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'mood-form' %}active{% endif %}"
-                                href="{% url 'mood-form' %}"><i class="fa-solid fa-brain"></i> Log Mood</a>
-                        </li>
-                        <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'stats' %}active{% endif %}"
-                                href="{% url 'stats' %}"><i class="fa-solid fa-chart-line"></i> Stats</a>
-                        </li>
-                        {% endif %}
-                        <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'about-us' %}active{% endif %}"
-                                href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i> About Us</a>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}"
-                                href="{% url 'logout' %}"><span id="usernameNav">{{ user.username | capfirst }}</span>
-                                <i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-                        </li>
-                        {% else %}
-                        <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'login' %}active{% endif %}"
-                                href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Login</a>
-                        </li>
-                        <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'signup' %}active{% endif %}"
-                                href="{% url 'signup' %}">Sign Up</a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </nav>
+    <div class="background-image">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'landing' %}">
+                <h3>MenTool</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Account Home</a>
+                    </li>
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'mood-form' %}"><i class="fa-solid fa-brain"></i> Log Mood</a>
+                    </li>
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'stats' %}"><i class="fa-solid fa-chart-line"></i> Stats</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i> About Us</a>
+                    </li>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'logout' %}"><span id="usernameNav">{{ user.username | capfirst }}</span> <i
+                                class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'login' %}"><i class="fa-solid fa-user"></i> Login</a>
+                    </li>
+                    </li>
+                    <li class="nav-item pr-4 pt-2 pt-lg-0">
+                        <a href="{% url 'signup' %}">Sign Up</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        {% if messages %}
+        {% for message in messages %}
+        <div {% if message.tags %} class="{{ message.tags }}" {% endif %}> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
         </div>
-
-
-
+        {% endfor %}
+    </ul>
+    {% endif %}
         {% block content %}
         {% endblock %}
 
-    </div>
-
-    <!-- Footer -->
-    {% comment %} <footer class="fixed-bottom py-5 bg-light mt-5 ">
-        <div class="container px-4">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item">
-                            <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i><br>About Us</a>
-                        </li>
-                    </ul>
-                    <p class="m-0 text-center gold-text">Copyright &copy; MenTool 2023</p>
+        <!-- Footer -->
+        {% comment %} <footer class="fixed-bottom py-5 bg-light mt-5 ">
+            <div class="container px-4">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i><br>About Us</a>
+                            </li>
+                        </ul>
+                        <p class="m-0 text-center gold-text">Copyright &copy; MenTool 2023</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer> {% endcomment %}
+        </footer> {% endcomment %}
 
 
 
-    <!--Footer (adapted code from mdbootstrap.com)-->
-    <footer class="mt-5 text-center ms-auto text-white" style="background-color: #f1f1f1;">
-        <div class="container pt-4 text-center">
-            <!--Social media and contact-->
-            <div class="footer-icons mb-4">
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none social-icons" href="#!"
-                    role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-phone"></i>
-                </a>
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none social-icons" href="#!"
-                    target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-envelope"></i>
-                </a>
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1 social-icons" href="#!" target="_blank"
-                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1 social-icons" href="#!" target="_blank"
-                    role="button" data-mdb-ripple-color="dark"><i class="fa-brands fa-square-instagram"></i></a>
+        <!--Footer (adapted code from mdbootstrap.com)-->
+        <footer class="mt-5 text-center ms-auto text-white" style="background-color: #f1f1f1;">
+            <div class="container pt-4 text-center">
+                <!--Social media and contact-->
+                <div class="mb-4">
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none social-icons"
+                        href="#!" role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none social-icons"
+                        href="#!" target="_blank" role="button" data-mdb-ripple-color="dark"><i
+                            class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 social-icons" href="#!" target="_blank"
+                        role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 social-icons" href="#!" target="_blank"
+                        role="button" data-mdb-ripple-color="dark"><i class="fa-brands fa-square-instagram"></i></a>
 
+                </div>
             </div>
-        </div>
-        <div class="bottom-line text-center text-white p-3 ">
-            © 2023 Copyright:MenTool
-        </div>
-    </footer>
+            <div class="bottom-line text-center text-white p-3 ">
+                © 2023 Copyright:MenTool
+            </div>
+        </footer>
     </div>
     <!-- Bootstrap 4 JS -->
 
@@ -134,7 +136,6 @@
     <script src="{% static 'js/script.js' %}"></script>
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/076967cb18.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
