@@ -18,6 +18,10 @@
     --font-size-small: 16px;
 }
 
+.x-large-font {
+    font-size: var(--font-size-x-large);
+}
+
 html,
 body {
     margin: 0;
@@ -199,9 +203,143 @@ p {
     padding-right: 25px
 }
 
+/* Mood Form */
+
 .mood-radio-buttons {
     display: inline;
+    font-size: 2rem;
 }
+
+#id_mood_level_0 {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 0.3s ease; 
+    margin-left: 11px;
+    margin-top: 11px;
+}
+
+#id_mood_level_0:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+#id_mood_level_0:checked {
+    box-shadow: 0 0 50px var(--color-soft-off-white);
+    background-color: rgba(194, 194, 241, 0.5);
+}
+
+
+#id_mood_level_1 {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 0.3s ease; 
+    margin-left: 11px;
+    margin-top: 11px;
+}
+
+#id_mood_level_1:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+#id_mood_level_1:checked {
+    box-shadow: 0 0 50px var(--color-soft-off-white);
+    background-color: rgba(194, 194, 241, 0.5);
+}
+
+
+#id_mood_level_2 {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 0.3s ease; 
+    margin-left: 11px;
+    margin-top: 11px;
+}
+
+#id_mood_level_2:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+#id_mood_level_2:checked {
+    box-shadow: 0 0 50px var(--color-soft-off-white);
+    background-color: rgba(194, 194, 241, 0.5);
+}
+
+
+#id_mood_level_3 {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 0.3s ease; 
+    margin-left: 11px;
+    margin-top: 11px;
+}
+
+#id_mood_level_3:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+#id_mood_level_3:checked {
+    box-shadow: 0 0 50px var(--color-soft-off-white);
+    background-color: rgba(194, 194, 241, 0.5);
+}
+
+
+#id_mood_level_4 {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 0.3s ease; 
+    margin-left: 11px;
+    margin-top: 11px;
+}
+
+#id_mood_level_4:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+#id_mood_level_4:checked {
+    box-shadow: 0 0 50px var(--color-soft-off-white);
+    background-color: rgba(194, 194, 241, 0.5);
+}
+
+
 
 footer {
     /* bottom: 0px; */
