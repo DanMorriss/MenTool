@@ -32,7 +32,13 @@ class MoodView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
-        form.instance.date = timezone.now()
+
+        # check if the same date already exists in the user records
+        check_mood_date = Mood.objects.filter(user=self.request.user, date=timezone.now()).first()
+        if check_mood_date:
+            form.add_error(None, "A mood record already exists. Go modify it!")
+            return self.form_invalid(form)
+
         return super().form_valid(form)
 
 
