@@ -167,15 +167,16 @@ p {
     box-shadow: 3px 5px .5em #010A26;
 }
 
-
+.mood-heading {
+    font-family: quicksand;
+    color:#EBF2F2;
+}
 
 
 .date-text {
     color: #EBF2F2;
     width: 100%;
 }
-
-
 
 
 footer {
