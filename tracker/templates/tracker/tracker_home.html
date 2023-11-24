@@ -13,7 +13,7 @@
     <h2 class="heading text-center">Hello, {{ user.username }}!</h2>
   </div>
 
-<div class="row d-flex p-4 justify-content-around">
+<div class="row p-4 justify-content-around">
       <div>
         <a href="{% url 'stats' %}" class="m-2 options-btn text-center btn btn-lg btn-block">Your MenTool Data</a>
       </div>
@@ -28,7 +28,7 @@
   <h4 class="heading text-center">Your most recent mood</h4>
 
     <div class="container">
-      <div class="card shadow-lg p-5">
+      <div class="mood-container card p-5">
         {% if object_list %}
             <div class="d-flex">
                 <div class="d-flex">
