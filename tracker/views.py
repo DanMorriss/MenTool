@@ -20,7 +20,7 @@ class HomeView(LoginRequiredMixin, ListView):
     login_url = reverse_lazy('login')
 
     def get_queryset(self):
-        queryset = Mood.objects.filter(user=self.request.user).order_by('-date')[:7]
+        queryset = Mood.objects.filter(user=self.request.user).order_by('-date')[:7][::-1]
         return queryset
 
 
