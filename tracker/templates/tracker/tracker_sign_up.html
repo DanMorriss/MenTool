@@ -1,12 +1,77 @@
 {% extends "base.html" %}
 {% load static %} {% load crispy_forms_tags %}
 {% block content %}
-<div class="container card shadow-lg p-5 mt-5">
+<!-- <div class="container card shadow-lg p-5 mt-5">
     <h1>Sign Up</h1>
 
     <form method="post">
         {% csrf_token %} {{form.as_p }} <button type="submit">Sign up</button>
     </form>
-</div>
+</div> -->
+
+
+
+<h1>Sign Up</h1>
+
+<section class="gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5"> <!-- Adjusted for larger screens -->
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <div class="mb-md-5 mt-md-4 pb-5">
+
+                            <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
+                            <p class="text-white-50 mb-5">Please enter your details!</p>
+
+                            <form method="post">
+                                {% csrf_token %}
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="{{ form.username.id_for_label }}">Username</label>
+                                    {{ form.username }}
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="{{ form.first_name.id_for_label }}">First
+                                        Name</label>
+                                    {{ form.first_name }}
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="{{ form.last_name.id_for_label }}">Surname</label>
+                                    {{ form.last_name }}
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="{{ form.email.id_for_label }}">Email</label>
+                                    {{ form.email }}
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="{{ form.password1.id_for_label }}">Password</label>
+                                    {{ form.password1 }}
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <label class="form-label" for="{{ form.password2.id_for_label }}">Repeat
+                                        Password</label>
+                                    {{ form.password2 }}
+                                </div>
+
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
+                            </form>
+
+                            <p>Already have an account? <a class="link-light" href="{% url 'login' %}">Log in</a></p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
