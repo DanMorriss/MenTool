@@ -30,3 +30,5 @@ class MoodForm(forms.ModelForm):
     class Meta:
         model = Mood
         fields = ['mood_level', 'comment']
+        widgets = {'mood_level': forms.RadioSelect(
+            attrs={'class': 'mood-radio-buttons'}), }
