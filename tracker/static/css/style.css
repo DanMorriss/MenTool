@@ -64,6 +64,40 @@ body {
     color: whitesmoke;
 }
 
+/* .navbar-toggler .toggler-icon {
+    color: whitesmoke;
+
+}
+
+.navbar-toggler .toggler-text {
+    color: whitesmoke;
+
+}
+
+.button.navbar-toggler.collapsed {
+    color: whitesmoke; */
+
+
+
+/* .navbar-toggler {
+    color: whitesmoke;
+
+} */
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='whitesmoke' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler-icon:hover {
+    color: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23224040' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+}
+
 a {
     color: whitesmoke;
 
@@ -74,7 +108,6 @@ a:hover {
     background-color: #dcd4cd;
     color: #224040;
     text-decoration: none;
-
     transform: scale(1.05);
     transition: .5s ease-in-out;
 
