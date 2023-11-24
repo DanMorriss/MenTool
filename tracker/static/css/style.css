@@ -22,7 +22,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -30,6 +30,7 @@ body {
     font-family: var(--font-secondary);
     font-weight: bold;
     flex-direction: column;
+    background-color: #EBF2F2;
 }
 
 .wrap-content {
@@ -187,13 +188,16 @@ p {
 .mood-heading {
     font-family: quicksand;
     color: #EBF2F2;
+    color: #dcd4cd;
 }
-
 
 
 .date-text {
     color: #EBF2F2;
     width: 100%;
+    font-size: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .mood-radio-buttons {
@@ -201,8 +205,8 @@ p {
 }
 
 footer {
-    bottom: 0px;
-    margin-top: auto;
+    /* bottom: 0px; */
+    /* margin-top: auto; */
 }
 
 
