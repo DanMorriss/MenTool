@@ -17,11 +17,25 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Mood',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False, verbose_name='ID'
+                    )),
                 ('date', models.DateField()),
-                ('mood_level', models.IntegerField(choices=[(0, 'Very Happy'), (1, 'Happy'), (2, 'Meh'), (3, 'Sad'), (4, 'Very Sad')], default=0)),
+                ('mood_level', models.IntegerField(choices=[
+                    (0, 'Very Happy'),
+                    (1, 'Happy'),
+                    (2, 'Meh'),
+                    (3, 'Sad'),
+                    (4, 'Very Sad')],
+                    default=0)),
                 ('comment', models.CharField(blank=True, max_length=500)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='moods', to=settings.AUTH_USER_MODEL)),
+                ('user',
+                 models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    related_name='moods',
+                    to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

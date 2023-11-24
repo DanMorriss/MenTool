@@ -148,14 +148,23 @@ p {
 
 /*--Logo--*/
 
-img {
+.logo-image {
     border-radius: 50%;
+    max-width: 90vw;
 }
 
 .options-btn {
-    background-color: #BFBAAA;
+    background-color:#224040;
+    color: #dcd4cd;
+    height: 100%;
     font-weight: bold;
-    font-size: 125%;
+    font-size: 160%;
+    box-shadow: 3px 5px .5em #010A26;
+}
+
+.mood-container {
+    background-color: #224040;
+    box-shadow: 3px 5px .5em #010A26;
 }
 
 
@@ -181,6 +190,7 @@ footer {
     font-size: small;
 
 }
+
 
 /*---------------About us*/
 
