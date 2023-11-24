@@ -162,15 +162,31 @@ p {
     box-shadow: 3px 5px .5em #010A26;
 }
 
+.submit-mood-btn {
+    background-color:#224040;
+    color: #dcd4cd;
+    height: 100%;
+    font-weight: bold;
+    font-size: 160%;
+    box-shadow: 3px 2px .5em #e1e2e5;
+}
+
 .mood-container {
     background-color: #224040;
     box-shadow: 3px 5px .5em #010A26;
 }
 
+
+.white-text {
+    color: var(--color-light-taupe);
+}
+
+
 .mood-heading {
     font-family: quicksand;
     color:#dcd4cd;
 }
+
 
 .date-text {
     color: #EBF2F2;
@@ -180,6 +196,9 @@ p {
     padding-right: 25px
 }
 
+.mood-radio-buttons {
+    display: inline;
+}
 
 footer {
     /* bottom: 0px; */
