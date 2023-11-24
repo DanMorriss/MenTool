@@ -150,6 +150,14 @@ Very Sad <i class="fa-regular fa-face-sad-cry"></i>
 <img src="./wireframes/analytics.jpg" alt="analytics page wireframe"> 
 </details>
 
+### Database Design
+Database design was made with QuickDBD. The database is hosted on ElephantSQL and is a PostgreSQL database.
+
+<details>
+<summary>Database Diagram</summary>
+<br>
+<img src="./docs/QuickDBD-mentool.png" alt="QuickDBD Database Design"> 
+</details>
 
 # Technologies Used
 ## Languages
