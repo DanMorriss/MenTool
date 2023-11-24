@@ -27,9 +27,9 @@
 
   
 
-    <div class="container">
-      <div class="mood-container card p-5">
-        <h4 class="heading text-center date-text">Your most recent mood</h4>
+    <div class="container mt-4">
+      <div class="mood-container card p-2">
+        <h4 class="mood-heading text-center date-text">Your most recent mood</h4>
         {% if object_list %}
             <div class="d-flex overflow-auto ">
                 <div class="d-flex">
@@ -60,7 +60,7 @@
         </div>
 
         <div class="mx-1 my-4">
-            <a href="{% url 'delete-account' %}" class="text-danger">Delete account</a>
+            <a href="{% url 'delete-account' %}" class="options-button btn btn-lg">Delete account</a>
         </div>
     </div>
 
