@@ -22,6 +22,10 @@
     font-size: var(--font-size-x-large);
 }
 
+.text-color-light {
+    color: whitesmoke;
+}
+
 html,
 body {
     margin: 0;
