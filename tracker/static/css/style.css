@@ -176,8 +176,15 @@ p {
     box-shadow: 3px 5px .5em #010A26;
 }
 
+
 .white-text {
     color: var(--color-light-taupe);
+}
+
+
+.mood-heading {
+    font-family: quicksand;
+    color:#EBF2F2;
 }
 
 
@@ -190,8 +197,6 @@ p {
 .mood-radio-buttons {
     display: inline;
 }
-
-
 
 footer {
     bottom: 0px;
