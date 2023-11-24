@@ -64,6 +64,7 @@ body {
     background-color: #dcd4cd;
     color: #224040;
     text-decoration: none;
+    border-radius: 10px;
     transform: scale(1.05);
     transition: .5s ease-in-out;
 
@@ -72,7 +73,8 @@ body {
 
 .nav-link.active {
     background-color: #dcd4cd;
-    color: #224040
+    color: #224040;
+    border-radius: 10px;
 }
 
 /*Navbar toggler*/
@@ -154,7 +156,7 @@ p {
 }
 
 .options-btn {
-    background-color:#224040;
+    background-color: #224040;
     color: #dcd4cd;
     height: 100%;
     font-weight: bold;
@@ -163,7 +165,7 @@ p {
 }
 
 .submit-mood-btn {
-    background-color:#224040;
+    background-color: #224040;
     color: #dcd4cd;
     height: 100%;
     font-weight: bold;
@@ -184,7 +186,7 @@ p {
 
 .mood-heading {
     font-family: quicksand;
-    color:#EBF2F2;
+    color: #EBF2F2;
 }
 
 
@@ -204,7 +206,7 @@ footer {
 }
 
 
-.social-icons:hover {
+.footer-icons:hover {
     background-color: #dcd4cd;
     text-decoration: none;
     box-shadow: 0 0.4rem 0.4rem 0 rgb(78, 30, 6);
@@ -230,4 +232,3 @@ footer {
     color: #010A26;
     font-size: "300%";
 }
-

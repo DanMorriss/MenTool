@@ -32,7 +32,7 @@
         <div class="background-image">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="{% url 'landing' %}">
+                <a class="navbar-brand nav-link" href="{% url 'landing' %}">
                     <h3>MenTool</h3>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -52,7 +52,7 @@
                         </li>
                         <li class="nav-item pr-4 pt-2 pt-lg-0">
                             <a class="nav-link {% if request.resolver_match.url_name == 'stats' %}active{% endif %}"
-                                href="{% url 'stats' %}"><i class="fa-solid fa-chart-line"></i>Stats</a>
+                                href="{% url 'stats' %}"><i class="fa-solid fa-chart-simple"></i> Stats</a>
                         </li>
                         {% endif %}
                         <li class="nav-item pr-4 pt-2 pt-lg-0">
@@ -95,20 +95,6 @@
         </div>
 
         <!-- Footer -->
-        {% comment %} <footer class="fixed-bottom py-5 bg-light mt-5 ">
-            <div class="container px-4">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i><br>About Us</a>
-                            </li>
-                        </ul>
-                        <p class="m-0 text-center gold-text">Copyright &copy; MenTool 2023</p>
-                    </div>
-                </div>
-            </div>
-        </footer> {% endcomment %}
 
 
 
@@ -117,17 +103,16 @@
             <div class="container pt-4 text-center">
                 <!--Social media and contact-->
                 <div class="mb-4">
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none social-icons"
-                        href="#!" role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-phone"></i>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none footer-icons"
+                        href="{% url 'home' %}"><i class="fa-solid fa-house"></i></a>
                     </a>
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none social-icons"
-                        href="#!" target="_blank" role="button" data-mdb-ripple-color="dark"><i
-                            class="fa-solid fa-envelope"></i>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 text-decoration-none footer-icons"
+                        href="{% url 'mood-form' %}"><i class="fa-solid fa-brain"></i></a>
                     </a>
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 social-icons" href="#!" target="_blank"
-                        role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 social-icons" href="#!" target="_blank"
-                        role="button" data-mdb-ripple-color="dark"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1  footer-icons" href="{% url 'stats' %}"><i
+                            class="fa-solid fa-chart-simple"></i></a>
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1 footer-icons"
+                        href="{% url 'about-us' %}"><i class="fa-solid fa-users"></i> </a>
 
                 </div>
             </div>
