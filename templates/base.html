@@ -43,7 +43,7 @@
                     <ul class="navbar-nav ml-auto">
                         {% if user.is_authenticated %}
                         <li class="nav-item pr-4 pt-2 pt-lg-0">
-                            <a class="nav-link {% if request.path == 'home' %}active{% endif %}"
+                            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
                                 href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Account Home</a>
                         </li>
                         <li class="nav-item pr-4 pt-2 pt-lg-0">
