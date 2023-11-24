@@ -162,11 +162,23 @@ p {
     box-shadow: 3px 5px .5em #010A26;
 }
 
+.submit-mood-btn {
+    background-color:#224040;
+    color: #dcd4cd;
+    height: 100%;
+    font-weight: bold;
+    font-size: 160%;
+    box-shadow: 3px 2px .5em #e1e2e5;
+}
+
 .mood-container {
     background-color: #224040;
     box-shadow: 3px 5px .5em #010A26;
 }
 
+.white-text {
+    color: var(--color-light-taupe);
+}
 
 
 
@@ -175,6 +187,9 @@ p {
     width: 100%;
 }
 
+.mood-radio-buttons {
+    display: inline;
+}
 
 
 
