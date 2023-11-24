@@ -93,12 +93,35 @@ MenTool is more than just an app; it's your new companion on a journey towards g
 ## Design Choices
 
 ## Font Awesome
-User <i class="fa-solid fa-user"></i>
-Chart <i class="fa-solid fa-chart-line"></i>
-Brain for track your mood? <i class="fa-solid fa-brain"></i>
-Logout <i class="fa-solid fa-right-from-bracket"></i>
-Home <i class="fa-solid fa-house"></i>
-About us <i class="fa-solid fa-users"></i>
+* Login 
+<br>
+<img src="./static/images/login-icon.jpg" alt="login icon" height="80px">
+<br>
+* User 
+<br>
+<img src="" alt="user icon" height="80px">
+<br>
+* Stats 
+<br>
+<img src="./static/images/stats-icon.jpg" alt="chart icon" height="80px">
+<br>
+* Brain for track your mood? 
+<br>
+<img src="./static/images/mood-icon.jpg" alt="track your mood icon" height="80px">
+<br>
+* Logout 
+<br>
+<img src="" alt="logout icon" height="80px">
+<br>
+* Home 
+<br>
+<img src="./static/images/mentool-icon.jpg" alt="home icon" height="80px">
+<br>
+* About us 
+<br>
+<img src="./static/images/about-us-icon.jpg" alt="about us icon" height="80px"> 
+<img src="./static/images/about-us-icon2.jpg" alt="about us icon footer" height="80px">
+<br>
 
 ## Mood Icons
 Very Happy <i class="fa-regular fa-face-grin-hearts"></i>
@@ -133,7 +156,7 @@ Audiowide, with its modern and tech-forward appearance, was used for headings to
 <details>
 <summary>About Us</summary>
 <br>
-<img src="./wireframes/" alt="about us page wireframe"> 
+<img src="./wireframes/about-us.jpg" alt="about us page wireframe"> 
 </details>
 
 <details>
