@@ -144,6 +144,18 @@ footer {
 
 }
 
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    /* Aligns items horizontally and evenly */
+    align-items: center;
+    /* Aligns items vertically */
+    padding: 20px 0;
+    /* Add padding as needed */
+}
+
+
+
 .social-icons:hover {
     background-color: #dcd4cd;
     text-decoration: none;
