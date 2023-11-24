@@ -135,6 +135,9 @@ p {
     border-radius: 10px;
 }
 
+.message-container-shadow {
+    box-shadow: 3px 5px .5em #010A26;
+}
 
 /*buttons*/
 .action-btn {
