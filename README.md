@@ -349,7 +349,119 @@ I put my website through the following validation tools:
 |  |  |
 
 # Deployment
+### Local Deployment
 
+In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone the repository:
+
+- `git clone https://github.com/DanMorriss/MenTool.git`
+
+If done locally, the virtual environment needs to be created and activated. To do so, in your IDE Terminal, type the following commands:
+```python
+python3 -m venv venv
+```
+
+If on Linux/MacOS, type the following command for activation:
+```
+source venv/bin/activate
+```
+On Windows type the following command for activation:
+```
+venv\Scripts\activate
+```
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/DanMorriss/MenTool)
+
+***
+
+After cloning or opening the repository in Gitpod, you will need to:
+
+1. Create your own `.env` file in the root level of the project:
+
+```
+SECRET_KEY=[your_secret_key]
+DEBUG=True
+DATABASE_URL=postgres://[username]:[password]@[host]:[port]/[database_name]
+CLOUDINARY_URL=cloudinary://[api_key]:[api_secret]@[cloud_name]
+```
+**Ensure the `.env` file is added to your `.gitignore` file so it doesn't get pushed to a public repository.
+
+If you don't have a Cloudinary account already, you will need to [Sign Up for Free](https://cloudinary.com/users/register/free) to host the static files in the project.
+
+2. Run `pip3 install -r requirements.txt` to install required Python packages.
+
+3. Setup the SQL database. In this project, PostgreSQL on [ElephantSQL](https://www.elephantsql.com) and put the details in the `.env` file.
+
+3. Migrate the database models using:
+`python3 manage.py migrate`
+
+4. Create a superuser with your own credentials:
+`python3 manage.py createsuperuser`
+
+5. Run the Django sever:
+`python manage.py runserver`
+The address of the server will appear in the terminal window.
+Add /admin to the address to access the Django admin panel using your superuser credentials.
+
+### Heroku Deployment
+
+Sign up to [Heroku](https://heroku.com/) for free if you don't already have an account.
+
+1. Create a new app in Heroku.
+
+2. In the Resources tab of your app in the Heroku dashboard, click Add-Ons and select Heroku Postgres. Select Hobby Dev - Free as your plan.
+
+3. When Heroku Postgres is installed, click the Settings tab in the Heroku Dashboard.
+Click Reveal Config Vars, and add the same variables from your `.env` file here, except for `DEBUG`, as you don't want debug mode on the deployed project.
+
+4. Insert the `SECRET_KEY`, `DATABASE_URL` and `CLOUDINARY_URL` to the Config Vars. 
+
+5. Create a file called `Procfile` (no extension) containing the following:
+```
+web: gunicorn mentool.wsgi
+```
+
+6. Add the url of your Heroku app ('https://mentool-2af96fd6f7e7.herokuapp.com') to your `settings.py` file:
+
+```
+ALLOWED_HOSTS = [
+    'https://mentool-2af96fd6f7e7.herokuapp.com',...
+]
+```
+
+7. Disable collect static so that Heroku doesn't try to collect static files when you deploy by adding the following to your Heroku Config Vars in the Settings tab of Heroku dashboard:
+
+```
+DISABLE_COLLECTSTATIC=1
+```
+
+The same variable has to be removed from Heroku Config Vars when you want to collect static files (for the testing and final deployment).
+
+8. Stage and commit your files to GitHub
+```
+git add . 
+git commit -m "Commit message"
+git push
+```
+
+9. In the Heroku dashboard for your App, select Deploy.
+Under Deployment Method, choose GitHub and search for your repository and click Connect.
+
+10. Select Enable Automatic Deployments, and then Deploy Branch. Heroku will build the App from the branch you selected.
+
+11. Now whenever you push your commits to GitHub, Heroku will rebuild the application.
+
+### Forking the GitHub Repository
+The project can be forked in order to make a copy of the original repository and propose changes to the project owner using Pull Requests.
+That can be done by following these steps:
+First, log in to GitHub and locate the [Project's Repository](https://github.com/DanMorriss/MenTool).
+At the top of the Repository, on the right side of the page, locate the "Fork" button.
+A copy of the Repository should now be in your GitHub account.
+You can now propose changes to the Repository by creating a Pull Request.
+
+### Live deployment
+The web site is deployed on Heroku and can be found [here](https://mentool-2af96fd6f7e7.herokuapp.com).
 
 # Credits
 
