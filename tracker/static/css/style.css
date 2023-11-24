@@ -66,6 +66,18 @@ a {
 
 }
 
+a:hover {
+
+    background-color: #dcd4cd;
+    color: #224040;
+    text-decoration: none;
+   
+    transform: scale(1.05);
+    transition: .5s ease-in-out;
+
+
+}
+
 #usernameNav {
     color: whitesmoke;
 }
