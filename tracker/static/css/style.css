@@ -18,25 +18,28 @@
     --font-size-small: 16px;
 }
 
-
-/* html {
-    height: 100%;
-} */
-
-
+html,
 body {
-    /* display: flex; */
-    font-family: var(--font-secondary);
-    font-weight: bold;
-    /* height: 100%;
-    min-height: 100vh;
-    flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 
-/* .wrap-content {
+
+
+body {
+    display: flex;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    flex-direction: column;
+}
+
+
+.wrap-content {
     flex: 1;
-} */
+    margin-bottom: 0;
+}
 
 
 .background-image {
@@ -71,7 +74,7 @@ a:hover {
     background-color: #dcd4cd;
     color: #224040;
     text-decoration: none;
-   
+
     transform: scale(1.05);
     transition: .5s ease-in-out;
 
@@ -82,7 +85,11 @@ a:hover {
     color: whitesmoke;
 }
 
-/* a:hover */
+#usernameNav:hover {
+    color: #224040;
+}
+
+
 .nav-link:hover {
 
     background-color: #dcd4cd;
@@ -138,15 +145,6 @@ p {
 
 /*--Logo--*/
 
-.message-content {
-    /* Adjust styling as needed; remove text-center if you want the text to wrap around the image */
-}
-
-.clearfix {
-    clear: both;
-    /* Clear the float to prevent layout issues */
-}
-
 img {
     border-radius: 50%;
 }
@@ -160,20 +158,10 @@ img {
 /*--Footer--*/
 
 
-/* footer {
+footer {
     bottom: 0px;
-    width: 100%;
     margin-top: auto;
 }
-.footer-social-icons {
-    display: flex;
-    justify-content: center;
-    /* Aligns items horizontally and evenly */
-    align-items: center;
-    /* Aligns items vertically */
-    padding: 20px 0;
-    /* Add padding as needed */
-} */
 
 
 .social-icons:hover {
@@ -185,7 +173,6 @@ img {
 }
 
 .bottom-line {
-
     background-color: #224040;
     font-size: small;
 
