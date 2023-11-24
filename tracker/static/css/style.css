@@ -185,6 +185,7 @@ img {
 .options-btn {
     background-color:#224040;
     color: #dcd4cd;
+    height: 100%;
     font-weight: bold;
     font-size: 160%;
     box-shadow: 3px 5px .5em #010A26;
