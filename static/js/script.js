@@ -90,3 +90,24 @@ function fetchGitHubInformation(event) {
 
 $(document).ready(fetchGitHubInformation);
 
+// Change Radio Buttons
+
+$(document).ready(function() {
+    $('#id_mood_level_0').next('label').html('<i class="far fa-face-grin-hearts x-large-font p-2"></i>');
+});
+
+$(document).ready(function() {
+    $('#id_mood_level_1').next('label').html('<i class="fa-regular fa-face-smile-beam x-large-font p-2"></i>');
+});
+
+$(document).ready(function() {
+    $('#id_mood_level_2').next('label').html('<i class="fa-regular fa-face-meh x-large-font p-2"></i>');
+});
+
+$(document).ready(function() {
+    $('#id_mood_level_3').next('label').html('<i class="fa-regular fa-face-sad-tear x-large-font p-2"></i>');
+});
+
+$(document).ready(function() {
+    $('#id_mood_level_4').next('label').html('<i class="fa-regular fa-face-sad-cry x-large-font p-2"></i>');
+});
