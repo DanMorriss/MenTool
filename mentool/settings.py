@@ -34,9 +34,9 @@ DEBUG = os.environ.get("DEBUG")
 # CLOUDINARY URL from environment variable
 CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
-ALLOWED_HOSTS = [
+ALLOWED_HOSTS = [ "*",
     "https://8000-danmorriss-mentool-1t3kh0d7w2b.ws-eu106.gitpod.io", "https://8000-agyluczak-mentool-gabrkhljn7k.ws-eu106.gitpod.io",
-    "mentool-2af96fd6f7e7.herokuapp.com/", '8000-email2ify-mentool-2ezcnhxci5.us2.codeanyapp.com'  # TODO: "*" to be removed
+    "mentool-2af96fd6f7e7.herokuapp.com/", '8000-email2ify-mentool-2ezcnhxci5.us2.codeanyapp.com', "*"  # TODO: "*" to be removed
 ]
 CSRF_TRUSTED_ORIGINS = ["https://8000-email2ify-mentool-2ezcnhxci5.us2.codeanyapp.com"]
 

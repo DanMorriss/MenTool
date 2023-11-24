@@ -13,12 +13,12 @@
     <h2 class="heading text-center">Hello, {{ user.username }}!</h2>
   </div>
 
-<div class="row p-4 justify-content-around">
+<div class="row p-4 justify-content-around align-items-center">
       <div>
-        <a href="{% url 'stats' %}" class="m-2 options-btn border text-center btn btn-lg btn-block">Your MenTool Data</a>
+        <a href="{% url 'stats' %}" class="ml-0 options-btn text-center btn btn-lg btn-block">Your MenTool Data</a>
       </div>
       <div>
-        <a href="{% url 'mood-form' %}" class="m-2 options-btn border text-center btn btn-lg btn-block">Log Your Mood</a>
+        <a href="{% url 'mood-form' %}" class=" options-btn text-center btn btn-lg btn-block">Log Your Mood</a>
       </div>
 </div>
   
@@ -28,9 +28,9 @@
   <h4 class="heading text-center">Your most recent mood</h4>
 
     <div class="container">
-      <div class="card shadow-lg p-5">
+      <div class="mood-container card p-5">
         {% if object_list %}
-            <div class="d-flex">
+            <div class="d-flex overflow-auto ">
                 <div class="d-flex">
                 {% for mood in object_list %}
                     <div class="d-flex flex-column text-center justify-content-end m-1">
