@@ -230,3 +230,8 @@ footer {
 .col-4 {
     padding: 15px;
 }
+
+.about-heading {
+    color: #010A26;
+    font-size: "300%";
+}
