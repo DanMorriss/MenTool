@@ -30,9 +30,9 @@
   <h4 class="heading text-center">Your most recent mood</h4>
 
   <div class="container">
-    <div class="card shadow-lg p-5">
+    <div class="mood-container card p-5">
       {% if object_list %}
-      <div class="d-flex">
+      <div class="d-flex overflow-auto ">
         <div class="d-flex">
           {% for mood in object_list %}
           <div class="d-flex flex-column text-center justify-content-end m-1">
@@ -52,7 +52,7 @@
             <a href="{% url 'mood-detail' mood.id %}" class="face very-sad-face"><i
                 class="fa-regular fa-face-sad-cry"></i></a>
             {% endif %}
-            <p>{{ mood.date|date:"" }}</p>
+            <p class="date-text">{{ mood.date|date:"" }}</p>
           </div>
           {% endfor %}
         </div>
@@ -63,7 +63,31 @@
       </div>
       {% endif %}
     </div>
+
+    {% if mood.mood_level == 0 %} <!--Very Happy-->
+    <a href="{% url 'mood-detail' mood.id %}" class="face very-happy-face"><i
+        class="fa-regular fa-face-grin-hearts"></i></a>
+    {% elif mood.mood_level == 1 %} <!--Happy-->
+    <a href="{% url 'mood-detail' mood.id %}" class="face happy-face"><i class="fa-regular fa-face-smile-beam"></i></a>
+    {% elif mood.mood_level == 2 %} <!--Meh-->
+    <a href="{% url 'mood-detail' mood.id %}" class="face meh-face"><i class="fa-regular fa-face-meh"></i></a>
+    {% elif mood.mood_level == 3 %} <!--Sad-->
+    <a href="{% url 'mood-detail' mood.id %}" class="face sad-face"><i class="fa-regular fa-face-sad-tear"></i></a>
+    {% elif mood.mood_level == 4 %} <!--Very Sad-->
+    <a href="{% url 'mood-detail' mood.id %}" class="face very-sad-face"><i class="fa-regular fa-face-sad-cry"></i></a>
+    {% endif %}
+    <p>{{ mood.date|date:"" }}</p>
   </div>
+  {% endfor %}
+</div>
+</div>
+{% else %}
+<div>
+  <p>No Data Yet</p>
+</div>
+{% endif %}
+</div>
+</div>
 
 
 </div>
