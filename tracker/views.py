@@ -103,8 +103,8 @@ class SignUpView(CreateView):
 class LogoutView(View):
     def get(self, request):
         logout(request)
-        messages.success(request, 'You have been logged out!', extra_tags='info')
-        return redirect(reverse_lazy('landing'))
+        messages.success(request, "You have been logged out!", extra_tags="alert alert-success alert-dismissible")
+        return redirect(reverse_lazy("landing"))
 
 
 class LoginView(FormView):
@@ -114,4 +114,5 @@ class LoginView(FormView):
 
     def form_valid(self, form):
         login(self.request, form.get_user())
+        messages.success(self.request, "You have been logged in!", extra_tags="alert alert-success alert-dismissible")
         return super().form_valid(form)
