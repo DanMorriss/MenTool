@@ -1,6 +1,6 @@
 # MenTool
 By Mind Menders
-Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps and Stanley Owanta
+Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps, Stanley Owanta and Lesly Lopez
 
 <img src="./static/images/logo.gif" alt="MenTool Logo" width=200>
 
