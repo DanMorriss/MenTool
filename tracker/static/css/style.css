@@ -26,6 +26,10 @@
     color: whitesmoke;
 }
 
+.text-color-dark {
+    color: var(--color-navy-blue);
+}
+
 html,
 body {
     margin: 0;
