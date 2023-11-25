@@ -7,13 +7,13 @@
 
 <h1 class="text-center pt-5">Delete Mood</h1>
 <div class="container">
-    <div class="card pt-3 text-center">
+    <div class="card pt-3 text-center mood-container white-text">
         <form method="POST" action="{% url 'delete-mood' mood.id %}" class="form mb-2 p-4 form-style" enctype="multipart/form-data">
             <p>{{ mood.user }}, are you sure you want to delete this?</p>
             {% csrf_token %}
             {{ form.media }}
             <button type="submit" class="btn form-style btn-danger mt-3">Yes</button>
-            <a href="{% url 'home' %}" class="btn form-style mt-3">Cancel</a>
+            <a href="{% url 'home' %}" class="btn btn-primary  form-style mt-3">Cancel</a>
         </form>
     </div>
 </div>
