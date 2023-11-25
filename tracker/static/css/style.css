@@ -26,6 +26,10 @@
     color: whitesmoke;
 }
 
+.text-color-dark {
+    color: var(--color-navy-blue);
+}
+
 html,
 body {
     margin: 0;
@@ -345,14 +349,6 @@ p {
     box-shadow: 0 0 50px var(--color-soft-off-white);
     background-color: rgba(194, 194, 241, 0.5);
 }
-
-
-
-footer {
-    /* bottom: 0px; */
-    /* margin-top: auto; */
-}
-
 
 .footer-icons:hover {
     background-color: #dcd4cd;
