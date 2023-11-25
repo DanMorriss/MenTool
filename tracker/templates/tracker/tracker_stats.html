@@ -2,8 +2,10 @@
 {% load static %}
 {% block content %}
 {% block head %}
+<!-- Linking to an external CSS stylesheet named 'stats.css' in the 'css' directory. -->
 <link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
 {% endblock %}
+<!-- Heading for the stats page, centered with padding. -->
 <h1 class="text-center p-3">Stats</h1>
 <div class="container">
     <div class="mood-container card p-5">
@@ -12,8 +14,9 @@
                 <div class="d-flex">
                 {% for mood in object_list %}
                     <div class="d-flex flex-column text-center justify-content-end m-1">
-                        
+                        <!-- Div container for displaying mood details in a flex column layout, centered text, and bottom alignment. -->
                         {% if mood.mood_level == 0 %} <!--Very Happy-->
+                         <!-- Very Happy mood level with a link to the mood detail and an associated face icon. -->
                         <a href="{% url 'mood-detail' mood.id %}" class="face very-happy-face"><i class="fa-regular fa-face-grin-hearts"></i></a>
                         {% elif mood.mood_level == 1 %} <!--Happy-->
                         <a href="{% url 'mood-detail' mood.id %}" class="face happy-face"><i class="fa-regular fa-face-smile-beam"></i></a>

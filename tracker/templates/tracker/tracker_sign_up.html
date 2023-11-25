@@ -21,28 +21,35 @@
                                 {% csrf_token %}
 
                                 {% if form.errors %}
+                                <!-- Display error alert if there are form errors. -->
                                 <div class="alert alert-danger bg-warning" role="alert">
                                     <strong>Error:</strong> Please correct the errors below.
                                     {{form.errors}}
                                 </div>
                                 {% endif %}
-
+                                <!-- Row for form fields. -->
                                 <div class="row">
+                                     <!-- Column for the first name input field with right padding and margin. -->
                                     <div class="col pr-0 form-outline mb-2">
+                                          <!-- Displaying the first name form field. -->
                                         {{ form.first_name }}
+                                        <!-- Label for the first name input field. -->
                                         <label class="form-label" for="{{ form.first_name.id_for_label }}">First
+                                            
                                             Name</label>
                                     </div>
-
+                                    <!-- Column for the last name input field with margin. -->
                                     <div class="col form-outline mb-2">
                                         {{ form.last_name }}
                                         <label class="form-label" for="{{ form.last_name.id_for_label }}">Last
                                             Name</label>
                                     </div>
                                 </div>
-
+                                <!-- Form field for entering the username with margin. -->
                                 <div class="form-outline mb-2">
+                                     <!-- Displaying the username form field. -->
                                     {{ form.username }}
+                                     <!-- Label for the username input field. -->
                                     <label class="form-label" for="{{ form.username.id_for_label }}">Username</label>
                                 </div>
 
@@ -63,6 +70,7 @@
                                 </div>
 
                             </form>
+                            <!-- Paragraph for prompting user to log in, centered with light text, top margin, and bottom margin. -->
                             <p class="text-center text-light mt-5 mb-0">Have already an account? <a
                                     href="{% url 'login' %}" class="fw-bold text-light"><u>Log In Here</u></a></p>
 
