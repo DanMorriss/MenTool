@@ -61,6 +61,7 @@ class UpdateMoodView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         form.instance.date = timezone.now()
+        messages.success(self.request, "Successfully updated your Mood!", extra_tags="alert alert-success alert-dismissible")
         return super().form_valid(form)
 
     def test_func(self):
@@ -75,6 +76,7 @@ class DeleteMoodView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         mood = self.get_object()
+        messages.success(self.request, "Your Mood has been deleted!", extra_tags="alert alert-success alert-dismissible")
         return self.request.user == mood.user
 
 
