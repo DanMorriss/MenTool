@@ -1,23 +1,24 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-{% block head %}
+{% extends "base.html" %} {% load static %} {% block content %} {% block head %}
 <!-- Linking to an external CSS stylesheet named 'stats.css' in the 'css' directory. -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}" />
 {% endblock %}
 <!-- Heading with class "text-center" and padding top of 5 units, indicating the title "Delete Account".-->
 <h1 class="text-center pt-5">Delete Account</h1>
 <div class="container">
-    <div class="card pt-3 text-center">
-        <form method="POST" action="{% url 'delete-account' delete.id %}" class="form mb-2 p-4 form-style" enctype="multipart/form-data">
-            <p>{{ delete.user }}, are you sure you want to delete this?</p>
-             <!-- CSRF token for form security. -->
-            {% csrf_token %}
-            {{ form.media }}
-            <button type="submit" class="btn form-style btn-danger mt-3">Yes</button>
-            <a href="{% url 'home' %}" class="btn form-style mt-3">Cancel</a>
-        </form>
-    </div>
+  <div class="card pt-3 text-center">
+    <form
+      method="POST"
+      action="{% url 'delete-account' delete.id %}"
+      class="form mb-2 p-4 form-style"
+      enctype="multipart/form-data"
+    >
+      <p>{{ delete.user }}, are you sure you want to delete this?</p>
+      <!-- CSRF token for form security. -->
+      {% csrf_token %} {{ form.media }}
+      <button type="submit" class="btn form-style btn-danger mt-3">Yes</button>
+      <a href="{% url 'home' %}" class="btn form-style mt-3">Cancel</a>
+    </form>
+  </div>
 </div>
 
 {% endblock %}

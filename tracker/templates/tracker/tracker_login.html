@@ -1,51 +1,60 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <section class="vh-100 gradient-custom">
-    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                    <div class="bg-dark text-white card" style="border-radius: 15px;">
-                        <div class="card-body p-5">
-                            <h2 class="text-uppercase text-center mb-5">Log In</h2>
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="bg-dark text-white card" style="border-radius: 15px">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Log In</h2>
 
-                            <form method="post">
-                                {% csrf_token %}
-
-                                {% if form.errors %}
-                                <div class="alert alert-danger bg-warning" role="alert">
-                                    <strong>Error:</strong> Please correct the errors below.
-                                    {{form.errors}}
-                                </div>
-                                {% endif %}
-
-                                <div class="form-outline mb-2">
-                                    {{ form.username }}
-                                    <label class="form-label" for="{{ form.username.id_for_label }}">Username</label>
-                                </div>
-
-                                <div class="form-outline mb-2">
-                                    {{ form.password }}
-                                    <label class="form-label" for="{{ form.password.id_for_label }}">Password</label>
-                                </div>
-
-                                <div class="d-flex justify-content-center">
-                                    <button type="submit"
-                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Log
-                                        In</button>
-                                </div>
-
-                            </form>
-                            <p class="text-center text-light mt-5 mb-0">Don't have an account? <a
-                                    href="{% url 'signup' %}" class="fw-bold text-light"><u>Sign Up Here</u></a></p>
-
-                        </div>
-                    </div>
+              <form method="post">
+                {% csrf_token %} {% if form.errors %}
+                <div class="alert alert-danger bg-warning" role="alert">
+                  <strong>Error:</strong> Please correct the errors below.
+                  {{form.errors}}
                 </div>
+                {% endif %}
+
+                <div class="form-outline mb-2">
+                  {{ form.username }}
+                  <label
+                    class="form-label"
+                    for="{{ form.username.id_for_label }}"
+                    >Username</label
+                  >
+                </div>
+
+                <div class="form-outline mb-2">
+                  {{ form.password }}
+                  <label
+                    class="form-label"
+                    for="{{ form.password.id_for_label }}"
+                    >Password</label
+                  >
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                  >
+                    Log In
+                  </button>
+                </div>
+              </form>
+              <p class="text-center text-light mt-5 mb-0">
+                Don't have an account?
+                <a href="{% url 'signup' %}" class="fw-bold text-light"
+                  ><u>Sign Up Here</u></a
+                >
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 {% endblock %}
