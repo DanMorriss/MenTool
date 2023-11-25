@@ -2,20 +2,25 @@
 {% load static %}
 {% block content %}
 {% block head %}
+<!-- Linking to an external CSS stylesheet named 'stats.css' in the 'css' directory. -->
 <link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
 {% endblock %}
-
+<!-- Heading with class "text-center" and padding top of 5 units, indicating the title "Delete Mood".-->
 <h1 class="text-center pt-5">Delete Mood</h1>
 <div class="container">
     <div class="card pt-3 text-center mood-container white-text">
+        <!-- Form with method POST, action delete-mood, class form, margin bottom, padding 4 units, and form-style. -->
         <form method="POST" action="{% url 'delete-mood' mood.id %}" class="form mb-2 p-4 form-style" enctype="multipart/form-data">
+            <!-- Confirmation message for deleting. -->
             <p>{{ mood.user }}, are you sure you want to delete this?</p>
+             <!-- CSRF token for form security. -->
             {% csrf_token %}
             {{ form.media }}
+                    <!-- Submit button for confirming deletion. -->
             <button type="submit" class="btn form-style btn-danger mt-3">Yes</button>
+            <!-- Cancel button linking to the 'home' URL. -->
             <a href="{% url 'home' %}" class="btn btn-primary  form-style mt-3">Cancel</a>
         </form>
     </div>
 </div>
-
 {% endblock %}
