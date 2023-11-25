@@ -24,8 +24,8 @@ DEBUG = os.environ.get("DEBUG")
 CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 # ALLOWED_HOSTS
-ALLOWED_HOSTS = ["mentool-2af96fd6f7e7.herokuapp.com/", ]
-CSRF_TRUSTED_ORIGINS = ["mentool-2af96fd6f7e7.herokuapp.com/", ]
+ALLOWED_HOSTS = ["mentool-2af96fd6f7e7.herokuapp.com", ]
+CSRF_TRUSTED_ORIGINS = ["mentool-2af96fd6f7e7.herokuapp.com", ]
 
 # Application definition
 
