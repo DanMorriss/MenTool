@@ -350,14 +350,6 @@ p {
     background-color: rgba(194, 194, 241, 0.5);
 }
 
-
-
-footer {
-    /* bottom: 0px; */
-    /* margin-top: auto; */
-}
-
-
 .footer-icons:hover {
     background-color: #dcd4cd;
     text-decoration: none;
