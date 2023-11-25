@@ -14,7 +14,7 @@
   <h2 class="heading text-center">Hello, {{ user.username }}!</h2>
 </div>
 
-<div class="row p-4 justify-content-around align-items-center">
+{% comment %} <div class="row p-4 justify-content-around align-items-center">
 
   <!-- Heading with class "text-center" and padding top of 5 units, indicating the title "Account Home".-->
   <div>
@@ -24,12 +24,12 @@
     <a href="{% url 'mood-form' %}" class="mt-3 action-btn text-center btn btn-lg btn-block">Log Your Mood</a>
   </div>
 
-</div>
+</div> {% endcomment %}
 
 <div class="snapshot">
 
   <div class="container mt-4">
-    <div class="mood-container card p-2">
+    {% comment %} <div class="mood-container card p-2">
       <h4 class="mood-heading text-center">Your most recent mood</h4>
       {% if object_list %}
       <div class="d-flex overflow-auto ">
@@ -62,7 +62,7 @@
         <p class="date-text">No Data Yet</p>
       </div>
       {% endif %}
-    </div>
+    </div> {% endcomment %}
 
     {% comment %} <div class="mood-container card p-2 text-color-light mt-5 p-5">
       <h3 class="mood-heading text-center">Resources</h3>
@@ -88,7 +88,7 @@
   </div>
   <!-- Row containing two options for user interaction: "Edit Account" and "Delete Account". -->
   <div class="snapshot">
-    <div class="container mt-4">
+    <div class="container m-5">
       <!-- Heading indicating the user's most recent mood. -->
       <div class="mood-container card p-2">
         <h4 class="mood-heading text-center">Your most recent mood</h4>
