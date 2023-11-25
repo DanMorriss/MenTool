@@ -1,6 +1,6 @@
 # MenTool
 By Mind Menders
-Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps, Stanley Owanta and Lesly Lopez
+Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps and Stanley Owanta
 
 <img src="./static/images/logo.gif" alt="MenTool Logo" width=200>
 
@@ -29,21 +29,29 @@ Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps,
     1. [Existing Features](#existing-features)
     2. [Future Features](#future-features)
 7. [Testing](#validation)
-    1. [HTML Validation](#HTML-validation)
-    2. [CSS Validation](#CSS-validation)
-    3. [Accessibility](#accessibility)
-    4. [Mock up](#mock-up)
+    1. [Contrast Validation](#Contrast-validation)
+    2. [HTML Validation](#HTML-validation)
+    3. [CSS Validation](#CSS-validation)
+    4. [Accessibility](#accessibility)
     5. [Performance](#performance)
     6. [Device testing](#performing-tests-on-various-devices)
     7. [Browser Compatibility](#browser-compatability)
-    8. [Testing User Stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
 11. [Acknowledgements](#acknowledgements)
 
 # Project Description
-MenTool is more than just an app; it's your new companion on a journey towards greater self-awareness and emotional well-being. We understand that life throws curveballs, and sometimes, keeping track of how you feel can make all the difference. That's where we come in. Whether you’re riding high, feeling low, or just cruising somewhere in between, MenTool is here to help you understand and navigate your emotional world with greater clarity and confidence. Take a moment each day to check in with yourself. Log your mood, understand patterns, and discover insights that can help you lead a more balanced and fulfilling life. Remember, this is a safe space to be honest and open about how you’re feeling - no judgments, no pressure.
+This is MenTool, just a simple way of tracking your mood whenever you want to.
+It’s completely anonymous, all data here is just for you to see how you’re getting on.
+At MenTool we understand that sharing moods and feelings with others can be difficult so we’re
+providing users with a way of simply recording them. You can then view the data and see how things
+are changing, for better or worse, over time.
+This might help you become more aware of how you are feeling about yourself, relationships, the wider
+world and more or it might just be an interesting thing to look at - ‘This week I was OK for more
+days than I was sad’ or ‘That was a great week, only one down day!”.
+We’re not going to suggest changes, hint at trends or anything else, just allow you to observe how
+you feel day by day. It’s so easy to use, just a couple of clicks a day or whenever you want too.
 
 # Project Goals
 
@@ -276,147 +284,79 @@ User stories covered: 8, 11
 # Validation
 I put my website through the following validation tools:
 
-## HTML Validation
+## Contrast Validation:
+<details>
+<summary>Account Page</summary>
+<br>
+<img src="./docs/screenshots/acount-page-contrast.png" alt="acount page contrast"> 
+</details>
 
+<details>
+<summary>Landing Page</summary>
+<br>
+<img src="./docs/screenshots/landing-page-contrast.png" alt="landing page contrast"> 
+</details>
+
+<details>
+<summary>Login Page</summary>
+<br>
+<img src="./docs/screenshots/login-page-contrast.png" alt="login page contrast"> 
+</details>
+
+<details>
+<summary>Signup Page</summary>
+<br>
+<img src="./docs/screenshots/signup-page-contrast.png" alt="signup page contrast"> 
+</details>
+
+### HTML Validation:
+All good
 
 ### CSS Validation: 
+All good
 
+### Performance:
 
-### Accessibility: 
+<details>
+<summary>About us Lighthouse</summary>
+<br>
+<img src="./docs/screenshots/about-us-lighthouse.png" alt="lighthouse about us"> 
+</details>
 
+<details>
+<summary>Landing Page Lighthouse</summary>
+<br>
+<img src="./docs/screenshots/landing-page-lighthouse.png" alt="lighthouse landing page"> 
+</details>
 
-### Mock up
+<details>
+<summary>Login Lighthouse</summary>
+<br>
+<img src="./docs/screenshots/login-lighthouse.png" alt="lighthouse login page"> 
+</details>
 
-
-### Performance
-
+<details>
+<summary>Signup Lighthouse</summary>
+<br>
+<img src="./docs/screenshots/signup-lighthouse.png" alt="lighthouse signup page"> 
+</details>
 
 ### Device testing
- 
+Iphone
+Mac
+Linux
+Windows
 
 ### Browser Compatibility
-
-
-### Testing user stories
-1.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-2. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-3. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-4.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-5.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-6. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-7.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-8. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-9.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-10.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-11.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-12.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-13.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-14. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-15. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
-
-16. 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  |  |
-
+Chrome
+Firefox
+Edge
 
 ## Bugs
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 |  |  |
-|  |  |
-|  |  | 
-|  |  |
-|  |  |
+
 
 # Deployment
 ### Local Deployment
@@ -534,15 +474,11 @@ You can now propose changes to the Repository by creating a Pull Request.
 The web site is deployed on Heroku and can be found [here](https://mentool-2af96fd6f7e7.herokuapp.com).
 
 # Credits
+The AMAZING team Mind Menders! Everyone is the team worked fantasticly well together and made the hackathon a fantastic event to be apart of!
 
-
-## Content
-
-
-## Media
-
-
-## Code and Design
-
-
-# Acknowledgements
+Dan - Our fearless leader who kept us on track all week
+Tom - Our resident Yoda helping with all backend issues and deployment
+Ben - Our middion guidrnce councilor, keeping the project ideals together at all time.
+Agy - Our front end magician, making our site look pretty at seeing things the rest of us missed.
+Jamie - Our cleaning master, picking up everything gets the rest of us miss and keeping us on track.
+Stanley - Our backend guru who unforunately missed out on the in person day from missing his flight
