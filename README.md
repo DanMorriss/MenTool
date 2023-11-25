@@ -313,7 +313,12 @@ I put my website through the following validation tools:
 All good
 
 ### CSS Validation: 
-All good
+
+<details>
+<summary>Validation</summary>
+<br>
+<img src="./docs/screenshots/css validation.png" alt="css validation"> 
+</details>
 
 ### Performance:
 
