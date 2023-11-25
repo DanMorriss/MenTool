@@ -28,7 +28,7 @@
 
 <div class="snapshot">
 
-  <div class="container mt-4">
+  {% comment %} <div class="container mt-4"> {% endcomment %}
     {% comment %} <div class="mood-container card p-2">
       <h4 class="mood-heading text-center">Your most recent mood</h4>
       {% if object_list %}
@@ -73,7 +73,7 @@
     <div class="mx-1 my-4">
       <a href="{% url 'delete-account' %}" class="options-btn btn btn-lg">Delete account</a>
     </div> {% endcomment %}
-  </div>
+  {% comment %} </div> {% endcomment %}
 
   <!-- Row containing two options for user interaction: "Your MenTool Data" and "Log Your Mood". -->
   <div class="row p-4 justify-content-around align-items-center">
@@ -87,8 +87,8 @@
     </div>
   </div>
   <!-- Row containing two options for user interaction: "Edit Account" and "Delete Account". -->
-  <div class="snapshot">
-    <div class="container m-5">
+  <div class="snapshot d-flex justify-content-center ">
+    <div class="container m-5 d-flex justify-content-center ">
       <!-- Heading indicating the user's most recent mood. -->
       <div class="mood-container card p-2">
         <h4 class="mood-heading text-center">Your most recent mood</h4>
