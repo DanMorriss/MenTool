@@ -10,17 +10,18 @@
     there or to our LinkedIn pages!</p>
     
       <!-- Centered section for a contact form, username and dynamic data display. -->
-
-<section class="row justify-content-center">
-    <div class="row bg-color-contact">
-        <div class="col">
-            <div class="center-form">
-                <input type="text" id="gh-username" value="DanMorriss" oninput="fetchGitHubInformation()" />
-                <div id="gh-user-data"></div>
+<div class="container">
+    <section class="row justify-content-center">
+        <div class="row bg-color-contact">
+            <div class="col">
+                <div class="center-form">
+                    <input type="text" id="gh-username" value="DanMorriss" oninput="fetchGitHubInformation()" />
+                    <div id="gh-user-data"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <h2 class="text-center">Team Mind Menders</h2>
 <!-- Heading for a team section with the title "Team Mind Menders" centered. -->
@@ -115,19 +116,5 @@
     </div>
 </div>
 
-<!-- Container containing a row with a single column, aligned items in the center. -->
-
-
-
-
-<div class="container">
-    <div class="row align-items-center">
-        <div class="col">
-            <!-- Button linking back to the home page. -->
-            <a href="{% url 'landing' %}" class="btn action-btn btn-lg" tabindex="-1" role="button"
-                aria-disabled="true">Home</a>
-        </div>
-    </div>
-</div>
 
 {% endblock %}
