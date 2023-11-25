@@ -4,33 +4,38 @@
 
 <section class="vh-100 gradient-custom">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <!-- Full-height section with a custom gradient background. -->
         <div class="container h-100">
+            <!-- Container with a height of 100% to hold the login form. 
+            Mask for overlay with flex alignment. -->
             <div class="row d-flex justify-content-center align-items-center h-100">
+                <!-- Columns setup for various screen sizes. -->
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                     <div class="bg-dark text-white card" style="border-radius: 15px;">
+                        <!-- Card body with padding. -->
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Log In</h2>
-
+                            <!-- Form with method POST, action login, and class form. -->
                             <form method="post">
                                 {% csrf_token %}
-
+                                <!-- Display error messages if there are any. -->
                                 {% if form.errors %}
                                 <div class="alert alert-danger bg-warning" role="alert">
                                     <strong>Error:</strong> Please correct the errors below.
                                     {{form.errors}}
                                 </div>
                                 {% endif %}
-
+                                 <!-- Form field for entering the username. -->
                                 <div class="form-outline mb-2">
                                     {{ form.username }}
                                     <label class="form-label" for="{{ form.username.id_for_label }}">Username</label>
                                 </div>
-
+                                 <!-- Form field for entering the password. -->
                                 <div class="form-outline mb-2">
                                     {{ form.password }}
                                     <label class="form-label" for="{{ form.password.id_for_label }}">Password</label>
                                 </div>
-
+                                 <!-- Submit button for logging in. -->
                                 <div class="d-flex justify-content-center">
                                     <button type="submit"
                                         class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Log
@@ -38,6 +43,7 @@
                                 </div>
 
                             </form>
+                            <!-- Link to the signup page. -->
                             <p class="text-center text-light mt-5 mb-0">Don't have an account? <a
                                     href="{% url 'signup' %}" class="fw-bold text-light"><u>Sign Up Here</u></a></p>
 

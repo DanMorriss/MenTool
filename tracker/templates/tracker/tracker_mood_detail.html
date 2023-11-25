@@ -2,13 +2,15 @@
 {% load static %}
 {% block content %}
 {% block head %}
+<!-- Linking to an external CSS stylesheet named 'stats.css' in the 'css' directory. -->
 <link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
 {% endblock %}
+<!-- Heading with class "text-center" and padding top of 5 units, indicating the title "Mood".-->
 <h1 class="text-center p-3">Mood</h1>
+<!-- Container for displaying a mood entry with a date and related details. -->
 <div class="container">
     <div class="card shadow-lg mood-container white-text p-5">
         <p class="text-center">{{ mood.date }}</p>
-
         <div class="pb-3 ">
             {% if mood.comment %}
                 <div class="text-center m-1">
@@ -16,6 +18,7 @@
                     <p>{{ mood.comment }}</p>
                 </div>
             {% endif %}
+             <!-- Displaying the mood face based on the mood level. -->
             <div class=" text-center m-1">
                 {% if mood.mood_level == 0 %} <!--Very Happy-->
                 <i class="fa-regular fa-face-grin-hearts face-for-detail-page"></i>
@@ -38,9 +41,10 @@
             
         </div>
 
-
+        <!-- Container for edit and delete buttons, centered. -->
         <div class="container text-center">
             <a href="{% url 'update-mood' mood.id %}" class="btn btn-primary ">Edit</a>
+            <!-- Button to delete the mood entry, linked to the 'delete-mood' URL. -->
             <a href="{% url 'delete-mood' mood.id %}" class="btn btn-danger ">Delete</a>
         </div>
 

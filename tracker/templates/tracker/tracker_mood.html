@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% load static %} {% load crispy_forms_tags %}
 {% block content %}
-
+<!-- Container for mood logging form, with card styling, shadow, padding, and margin. -->
 <div class="container card shadow-lg p-5 mt-5 mood-container white-text text-center">
     <form method="POST" enctype="multipart/form-data">
         <h1 class="text-center">How are you feeling today?</h1>
+         <!-- CSRF token for form security. -->
         {% csrf_token %}
+        <!-- Displaying the mood logging form with crispy forms styling. -->
         {{ form | crispy }}
+         <!-- Button to submit the mood entry. -->
         <button class="btn submit-mood-btn" type="submit">Log Mood</button>
         
     </form>
