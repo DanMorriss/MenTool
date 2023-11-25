@@ -35,7 +35,7 @@
 <br> -->
 
 <section class="welcome">
-    <div class="container-fluid my-5">
+    <div class="container-fluid mt-4 mb-2">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-6 col-lg-8">
 
@@ -48,7 +48,7 @@
 
 <!--logo-->
 <div>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <img id="logo" class="logo-image" src="{% static 'images/center-logo.gif' %}" alt="logo">
         </div>
@@ -57,28 +57,24 @@
 <section class="welcome-message">
     <div class="container-fluid mt-3">
         <div class="row justify-content-center">
-            <div class="message-container text-message col-sm-10 col-md-8 col-lg-6">
+            <div class="message-container message-container-shadow text-message col-sm-10 col-md-8 col-lg-6">
                 <p class="message-content text-center">
-                    Hey there! We're genuinely thrilled to have you on board.
-                    MenTool is more than just an app; it's
-                    your new companion on
-                    a journey towards greater self-awareness and emotional well-being.
+                    <p class="text-center">Hey, how are you?</p>
 
-                    We understand that life throws curveballs, and sometimes, keeping track of how you feel can make all
-                    the difference.
-                    That's where we come in. Whether you’re riding high, feeling low, or just cruising somewhere in
-                    between, MenTool is
-                    here to help you understand and navigate your emotional world with greater clarity and confidence.
-
-                    Take a moment each day to check in with yourself. Log your mood, understand patterns, and discover
-                    insights that can
-                    help you lead a more balanced and fulfilling life. Remember, this is a safe space to be honest and
-                    open about how you’re
-                    feeling - no judgments, no pressure.
+                    <p>This is MenTool, just a simple way of tracking your mood whenever you want to.</p> 
+                    <p>It’s completely anonymous, all data here is just for you to see how you’re getting on.</p>
+                    
+                    <p>At MenTool we understand that sharing moods and feelings with others can be difficult so we’re providing users with a way of simple recording them. You can then view the data and see how things are changing, for better or worse, over time.</p>
+                    
+                    <p>This might help you become more aware of how you are feeling about yourself, relationships, the wider world and more or it might just be an interesting thing to look at - ‘This week I was OK for more days than I was sad’ or ‘That was a great week, only one down day!”.</p>
+                    
+                    <p>We’re not going to suggest changes, hint at trends or anything else, just allow you to observe how you feel day by day. It’s so easy to use, just a couple of clicks a day or whenever you want too.</p>
+                    
+                    <p>We hope you enjoy using MenTool.</p>
                 </p>
                 <br>
                 <div class="buttons text-center mb-4">
-                    <a href="{% url 'mood-form' %}" class="btn action-btn btn-lg">Get Started</a>
+                    <a href="{% url 'mood-form' %}" class="btn options-btn btn-lg">Get Started</a>
                 </div>
             </div>
         </div>
