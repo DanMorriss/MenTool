@@ -2,10 +2,12 @@
 {% load static %}
 {% block content %}
 {% block head %}
+<!-- Linking to an external CSS stylesheet named 'stats.css' in the 'css' directory. -->
 <link rel="stylesheet" type="text/css" href="{% static 'css/stats.css' %}">
 {% endblock %}
-
+<!-- Heading with class "text-center" and padding top of 5 units, indicating the title "Delete Account".-->
 <h1 class="text-center pt-5">Delete Account</h1>
+
 <div class="container">
     <div class="card pt-3 text-center">
         <form method="POST" action="{% url 'delete-account' delete.id %}" class="form mb-2 p-4 form-style" enctype="multipart/form-data">
