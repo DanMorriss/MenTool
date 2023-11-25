@@ -376,6 +376,11 @@ footer {
 
 }
 
+.col-41 {
+    padding: 15px;
+    padding-right: 70px;
+}
+
 .about-heading {
     color: #010A26;
     font-size: "300%";
