@@ -1,6 +1,6 @@
 # MenTool
 By Mind Menders
-Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps and Stanley Owanta
+Developers : Dan Morriss, Agy Luczak, Tomislav Dukez, Ben Gilbert, Jamie Phelps, Stanley Owanta and Lesly Lopez
 
 <img src="./static/images/logo.gif" alt="MenTool Logo" width=200>
 
@@ -99,7 +99,7 @@ MenTool is more than just an app; it's your new companion on a journey towards g
 <br>
 * User 
 <br>
-<img src="" alt="user icon" height="80px">
+<img src="./static/images/user-icon.jpg" alt="user icon" height="80px">
 <br>
 * Stats 
 <br>
@@ -111,11 +111,11 @@ MenTool is more than just an app; it's your new companion on a journey towards g
 <br>
 * Logout 
 <br>
-<img src="" alt="logout icon" height="80px">
+<img src="./static/images/logout-icon.jpg" alt="logout icon" height="80px">
 <br>
 * Home 
 <br>
-<img src="./static/images/mentool-icon.jpg" alt="home icon" height="80px">
+<img src="./static/images/home-icon.jpg" alt="home icon" height="80px">
 <br>
 * About us 
 <br>
@@ -135,7 +135,7 @@ This colour palette combines deep navy blue (#010A26), dark teal (#224040), soft
 
 ![Colours](docs/screenshots/MenTool_colours.png)
 
-![Background](/static/images/background_images.png)
+![Background](/static/images/mentool_background_lrg.png)
 
 ## Fonts
 Audiowide, with its modern and tech-forward appearance, was used for headings to give the app a contemporary and professional look. In contrast, Quicksand, with its more approachable and readable style, was applied for body text, ensuring that longer texts are easy on the eyes and pleasant to read. The combination of these two fonts balances a modern, tech-forward look with approachability and ease of use, aligning well with the app’s purpose and its target user base.
@@ -150,31 +150,62 @@ Audiowide, with its modern and tech-forward appearance, was used for headings to
 <details>
 <summary>Landing Page</summary>
 <br>
-<img src="./wireframes/landing-page.jpg" alt="landing page wireframe">
+<img src="./docs/screenshots/landing-page.jpg" alt="landing page wireframe">
 </details>
 
 <details>
 <summary>About Us</summary>
 <br>
-<img src="./wireframes/about-us.jpg" alt="about us page wireframe"> 
+<img src="./docs/screenshots/about-us.jpg" alt="about us page wireframe"> 
 </details>
 
 <details>
 <summary>Account Home</summary>
 <br>
-<img src="./wireframes/account-home.jpg" alt="account home page wireframe"> 
+<img src="./docs/screenshots/account-home.jpg" alt="account home page wireframe"> 
 </details>
 
 <details>
 <summary>Create Account and Login Page</summary>
 <br>
-<img src="./wireframes/create-account-and-login-screens.jpg" alt="login and account page wireframe"> 
+<img src="./docs/screenshots/create-account-and-login-screens.jpg" alt="login and account page wireframe"> 
 </details>
 
 <details>
 <summary>Analytics</summary>
 <br>
-<img src="./wireframes/analytics.jpg" alt="analytics page wireframe"> 
+<img src="./docs/screenshots/analytics.jpg" alt="analytics page wireframe"> 
+</details>
+
+## Link Validation Gifs
+<details>
+<summary>About US</summary>
+<br>
+<img src="./docs/screencasts/about_us.gif" alt="about us page links gif">
+</details>
+
+<details>
+<summary>Login</summary>
+<br>
+<img src="./docs/screencasts/login.gif" alt="login page links gif">
+</details>
+
+<details>
+<summary>Mood</summary>
+<br>
+<img src="./docs/screencasts/mood_crud.gif" alt="mood page links gif">
+</details>
+
+<details>
+<summary>Navbar</summary>
+<br>
+<img src="./docs/screencasts/navbar.gif" alt="navbar links gif">
+</details>
+
+<details>
+<summary>Sign up</summary>
+<br>
+<img src="./docs/screencasts/about_us.gif" alt="signup page links gif">
 </details>
 
 ### Database Design
@@ -204,6 +235,10 @@ Database design was made with QuickDBD. The database is hosted on ElephantSQL an
 * Django
 * Heroku
 * Jquery
+* Crispyforms
+* Cloudenary
+* Elephant sql
+* Peak
 
 
 # Features
