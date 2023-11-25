@@ -1,39 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<!-- <div class="container bg-warning mt-5">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="text-center mt-3">Welcome to MenTool</h1>
-            <br>
-        </div>
-        <img src="{% static 'images/emotions.png' %}" alt="emotions faces">
-        <div col-12>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna
-                aliqua. Sagittis id consectetur purus ut faucibus pulvinar. Vel quam elementum pulvinar etiam. Commodo
-                quis imperdiet
-                massa tincidunt nunc pulvinar sapien et. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et.
-                Cras adipiscing
-                enim eu turpis egestas pretium aenean. Molestie ac feugiat sed lectus. Sed tempus urna et pharetra.
-                Risus commodo
-                viverra maecenas accumsan lacus vel facilisis. Sed odio morbi quis commodo odio aenean. Turpis egestas
-                pretium aenean
-                pharetra magna ac placerat. Sit amet justo donec enim. Vivamus arcu felis bibendum ut. Sed felis eget
-                velit aliquet.
 
-            </p>
-            <br>
-            <div class="buttons text-center mb-3">
-                <a href="{% url 'mood-form' %}" class="btn btn-primary">Get Started</a>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<br> -->
-
+<!-- Page title -->
 <section class="welcome">
     <div class="container-fluid mt-4 mb-2">
         <div class="row justify-content-center">
@@ -54,27 +23,34 @@
         </div>
     </div>
 </div>
+<!--Main text-->
 <section class="welcome-message">
     <div class="container-fluid mt-3">
         <div class="row justify-content-center">
             <div class="message-container message-container-shadow text-message col-sm-10 col-md-8 col-lg-6">
                 <p class="message-content text-center">
-                    <p class="text-center">Hey, how are you?</p>
+                <p class="text-center">Hey, how are you?</p>
 
-                    <p>This is MenTool, just a simple way of tracking your mood whenever you want to.</p> 
-                    <p>It’s completely anonymous, all data here is just for you to see how you’re getting on.</p>
-                    
-                    <p>At MenTool we understand that sharing moods and feelings with others can be difficult so we’re providing users with a way of simple recording them. You can then view the data and see how things are changing, for better or worse, over time.</p>
-                    
-                    <p>This might help you become more aware of how you are feeling about yourself, relationships, the wider world and more or it might just be an interesting thing to look at - ‘This week I was OK for more days than I was sad’ or ‘That was a great week, only one down day!”.</p>
-                    
-                    <p>We’re not going to suggest changes, hint at trends or anything else, just allow you to observe how you feel day by day. It’s so easy to use, just a couple of clicks a day or whenever you want too.</p>
-                    
-                    <p>We hope you enjoy using MenTool.</p>
+                <p>This is MenTool, just a simple way of tracking your mood whenever you want to.</p>
+                <p>It’s completely anonymous, all data here is just for you to see how you’re getting on.</p>
+
+                <p>At MenTool we understand that sharing moods and feelings with others can be difficult so we’re
+                    providing users with a way of simple recording them. You can then view the data and see how things
+                    are changing, for better or worse, over time.</p>
+
+                <p>This might help you become more aware of how you are feeling about yourself, relationships, the wider
+                    world and more or it might just be an interesting thing to look at - ‘This week I was OK for more
+                    days than I was sad’ or ‘That was a great week, only one down day!”.</p>
+
+                <p>We’re not going to suggest changes, hint at trends or anything else, just allow you to observe how
+                    you feel day by day. It’s so easy to use, just a couple of clicks a day or whenever you want too.
+                </p>
+
+                <p>We hope you enjoy using MenTool.</p>
                 </p>
                 <br>
                 <div class="buttons text-center mb-4">
-                    <a href="{% url 'mood-form' %}" class="btn options-btn btn-lg">Get Started</a>
+                    <a href="{% url 'mood-form' %}" class="btn action-btn options-btn btn-lg">Get Started</a>
                 </div>
             </div>
         </div>

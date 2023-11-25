@@ -9,16 +9,16 @@
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                     <div class="bg-dark text-white card" style="border-radius: 15px;">
                         <div class="card-body p-5">
-                            <h2 class="text-uppercase text-center mb-5">Sign In</h2>
+                            <h2 class="text-uppercase text-center mb-5">Log In</h2>
 
                             <form method="post">
                                 {% csrf_token %}
 
                                 {% if form.errors %}
-                                    <div class="alert alert-danger bg-warning" role="alert">
-                                        <strong>Error:</strong> Please correct the errors below.
-                                        {{form.errors}}
-                                    </div>
+                                <div class="alert alert-danger bg-warning" role="alert">
+                                    <strong>Error:</strong> Please correct the errors below.
+                                    {{form.errors}}
+                                </div>
                                 {% endif %}
 
                                 <div class="form-outline mb-2">
@@ -32,12 +32,14 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Log In</button>
+                                    <button type="submit"
+                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Log
+                                        In</button>
                                 </div>
 
                             </form>
                             <p class="text-center text-light mt-5 mb-0">Don't have an account? <a
-                                    href="{% url 'signup' %}" class="fw-bold text-light"><u>Signup here</u></a></p>
+                                    href="{% url 'signup' %}" class="fw-bold text-light"><u>Sign Up Here</u></a></p>
 
                         </div>
                     </div>
@@ -45,5 +47,5 @@
             </div>
         </div>
     </div>
-</section> 
+</section>
 {% endblock %}
