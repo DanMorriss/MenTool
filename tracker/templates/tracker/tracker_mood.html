@@ -1,14 +1,14 @@
 {% extends "base.html" %} {% load static %} {% load crispy_forms_tags %} 
 {% block content %}
 
-<div
-  class="container card shadow-lg p-5 mt-5 mood-container white-text text-center"
->
-  <form method="POST" enctype="multipart/form-data">
-    <h1 class="text-center">How are you feeling today?</h1>
-    {% csrf_token %} {{ form | crispy }}
-    <button class="btn submit-mood-btn" type="submit">Log Mood</button>
-  </form>
+<div class="container card shadow-lg p-5 mt-5 mood-container white-text text-center">
+    <form method="POST" enctype="multipart/form-data">
+        <h1 class="text-center">How are you feeling today?</h1>
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button class="btn action-btn submit-mood-btn" type="submit">Log Mood</button>
+
+    </form>
 </div>
 
 {% endblock %}
