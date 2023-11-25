@@ -2,11 +2,23 @@
 {% load static %}
 {% block content %}
 
-
+<!-- This is an h1 heading with a class for styling -->
 <h1 class="welcome-heading text-center">About Us</h1>
-<p class="about-heading text-center">
+<!-- This is a paragraph with a class for styling -->
+<p class="about-heading text-center"> 
+  <!-- Add your paragraph content here -->
+    <!-- Team Mind Menders are a group of 7 developers who have come together to create a web application that will help
+        people
+        track their mental health. We are all graduates of the DevelopMe_ coding bootcamp and have been working together
+        for
+        the last 2 weeks to create this application. -->
+</p>
+
     Use the search below to find our repos on GitHub or click the links in each of our sections to take you straight
     there or to our LinkedIn pages!</p>
+    
+      <!-- Centered section for a contact form, username and dynamic data display. -->
+
 <section class="row justify-content-center">
     <div class="row bg-color-contact">
         <div class="col">
@@ -19,11 +31,13 @@
 </section>
 
 <h2 class="text-center">Team Mind Menders</h2>
-
+<!-- Heading for a team section with the title "Team Mind Menders" centered. -->
 
 <div class="container">
+    <!-- Team member card with image, name, description, and links to GitHub and LinkedIn. -->
     <div class="row justify-content-center">
         <div class="col-4">
+            <!-- Card with a fixed width and containing member information. -->
             <div class="card" style="width: 18rem;">
                 <img src="{% static 'images/dan.jpeg' %}" class="card-img-top" alt="Dan Morriss image">
                 <div class="card-body">
@@ -31,6 +45,7 @@
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's
                         content.</p>
+                    <!-- Buttons linking to the team member's GitHub and LinkedIn profiles. -->
                     <a href="https://github.com/DanMorriss" class="btn action-btn btn-lg">GitHub</a>
                     <a href="https://www.linkedin.com/in/morrissdaniel/" class="btn action-btn btn-lg">LinkedIn</a>
                 </div>
@@ -38,6 +53,7 @@
         </div>
 
         <div class="col-4">
+            <!-- Card with a fixed width and containing member information. -->
             <div class="card" style="width: 18rem;">
                 <img src="{% static 'images/agy.jpg' %}" class="card-img-top" alt="Agy Luczak image">
                 <div class="card-body">
@@ -53,6 +69,7 @@
         </div>
 
         <div class="col-4">
+            <!-- Card with a fixed width and containing member information. -->
             <div class="card" style="width: 18rem;">
                 <img src="{% static 'images/tomislav.jpeg' %}" class="card-img-top" alt="Tomislav Dukez image">
                 <div class="card-body">
@@ -69,6 +86,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-4">
+            <!-- Card with a fixed width and containing member information. -->
             <div class="card" style="width: 18rem;">
                 <img src=" {% static 'images/ben.jpeg' %}" class="card-img-top" alt="Ben Gilbert">
                 <div class="card-body">
@@ -82,6 +100,7 @@
             </div>
         </div>
         <div class="col-4">
+            <!-- Card with a fixed width and containing member information. -->
             <div class="card" style="width: 18rem;">
                 <img src="{% static 'images/jamie.jpeg' %}" class="card-img-top" alt="Jamie Phelps image">
                 <div class="card-body">
@@ -96,6 +115,7 @@
             </div>
         </div>
         <div class="col-4">
+            <!-- Card with a fixed width and containing member information. -->
             <div class="card" style="width: 18rem;">
                 <img src="{% static 'images/stanley.jpeg' %}" class="card-img-top" alt="Stanley Owanta image">
                 <div class="card-body">
@@ -113,10 +133,29 @@
     </div>
 </div>
 
+<!-- Container containing a row with a single column, aligned items in the center. -->
+<div class="row justify-content-center">
+    <div class="col-41">
+        <div class="card" style="width: 18rem;">
+            <img src=" {% static 'images/ben.jpeg' %}" class="card-img-top" alt="Lesly Lopez">
+            <div class="card-body">
+                <h5 class="card-title">Lesly Lopez</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="https://github.com/leslylopez43/leslylopez43.github.io" class="btn action-btn btn-lg">GitHub</a>
+                <a href="https://www.linkedin.com/in/lesly-lopez-a9a808270/" class="btn action-btn btn-lg">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <div class="container">
     <div class="row align-items-center">
         <div class="col">
+            <!-- Button linking back to the home page. -->
             <a href="{% url 'landing' %}" class="btn action-btn btn-lg" tabindex="-1" role="button"
                 aria-disabled="true">Home</a>
         </div>
