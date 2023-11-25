@@ -235,6 +235,10 @@ Database design was made with QuickDBD. The database is hosted on ElephantSQL an
 * Django
 * Heroku
 * Jquery
+* Crispyforms
+* Cloudenary
+* Elephant sql
+* Peak
 
 
 # Features
