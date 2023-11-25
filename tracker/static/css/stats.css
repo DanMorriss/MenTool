@@ -34,3 +34,14 @@
 .very-sad-face {
     padding-bottom: 2rem;
 }
+
+.face-for-detail-page {
+    transition: .5s ease-in-out;
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+.face-for-detail-page:hover {
+    transition: .5s ease-in-out;
+    transform: rotate(25deg);
+}
